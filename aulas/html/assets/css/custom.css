@@ -1,0 +1,67 @@
+.reveal pre {
+  width: 100%;
+}
+
+.fundo-branco { background-color:white; }
+
+.w100 { width:100% !important; }
+.w98 { width:98% !important; }
+.w90 { width:90% !important; }
+
+
+reveal img.avatar {
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+}
+/* Columns */
+/* ref: https://stackoverflow.com/questions/30861845/how-to-use-two-column-layout-with-reveal-js#answer-44392145 */
+.columns {
+    display: flex;
+}
+.col {
+    flex: 1;
+}
+
+/* Colours */
+.text-red {
+    color: #f00;
+}
+.text-green {
+    color: #0f0;
+}
+.text-yellow {
+    color: #ff0;
+}
+.text-blue {
+    color: #00f;
+}
+
+/* External Link */
+.prj-link {
+    font-family: monospace !important;
+    font-size: 0.7em !important;
+}
+
+.prj-link::before {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.1em;
+    margin-left: 0.1em;
+    content: "";
+    background: url("images/micro-sd-card.png") no-repeat 0 0;
+    background-size: 100%;
+    vertical-align: middle;
+}
+
+/* QR Code */
+.qrcode {
+    background-color: #fff;
+    padding: 1px 1px 1px 1px;
+    display: inline-block;
+}
+
+.half-size {
+    font-size: 0.5em !important;
+}

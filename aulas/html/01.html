@@ -1,0 +1,1024 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Aula 01 - Algoritmos e Estrutura de Dados</title>
+
+        <link rel="stylesheet" href="assets/css/reveal.css">
+        <!-- <link rel="stylesheet" href="css/theme/black.css"> -->
+        <link rel="stylesheet" href="assets/css/theme/night.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+        <!-- Custom CSS-->
+        <link rel="stylesheet" href="assets/css/custom.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!-- Manual style tweaks -->
+        <style>
+
+
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+              <!-- =================== CAPA =================== -->
+              <section>
+                  <section style="padding-top:100px" data-background="#292D34">
+                      <h1>AED</h1>
+                        - Aula 01 -
+                      <div>
+                        <img width="8%" class="plain" src="assets/images/letters/r.png" alt="">
+                        <img width="8%" class="plain" src="assets/images/letters/e.png" alt="">
+                        <img width="8%" class="plain" src="assets/images/letters/v.png" alt="">
+                        <img width="8%" class="plain" src="assets/images/letters/i.png" alt="">
+                        <img width="8%" class="plain" src="assets/images/letters/s.png" alt="">
+                        <img width="8%" class="plain" src="assets/images/letters/a.png" alt="">
+                        <img width="8%" class="plain" src="assets/images/letters/o.png" alt="">
+                        &nbsp;&nbsp;&nbsp;
+                        <img width="8%" class="plain" src="assets/images/letters/d.png" alt="">
+                        <img width="8%" class="plain" src="assets/images/letters/e.png" alt="">
+
+                      </div>
+                      <div>
+                        <img width="8%" class="plain" src="assets/images/letters/f.png" alt="">
+                        <img width="8%" class="plain" src="assets/images/letters/u.png" alt="">
+                        <img width="8%" class="plain" src="assets/images/letters/n.png" alt="">
+                        <img width="8%" class="plain" src="assets/images/letters/d.png" alt="">
+                        <img width="8%" class="plain" src="assets/images/letters/a.png" alt="">
+                        <img width="8%" class="plain" src="assets/images/letters/m.png" alt="">
+                        <img width="8%" class="plain" src="assets/images/letters/e.png" alt="">
+                        <img width="8%" class="plain" src="assets/images/letters/n.png" alt="">
+                        <img width="8%" class="plain" src="assets/images/letters/t.png" alt="">
+                        <img width="8%" class="plain" src="assets/images/letters/o.png" alt="">
+                        <img width="8%" class="plain" src="assets/images/letters/s.png" alt="">
+                      </div>
+                  </section>
+                </section>
+              </section>
+
+                <!-- =================== CONTEUDO DA APRESENTAÇÃO =================== -->
+                <section>
+                  <section id="conteudo" data-background="#09214F">
+                      <h3>Conteúdo</h3>
+                      <div class="columns">
+                          <div class="col">
+                              <ul style="font-size:0.9em">
+                                  <li><a href="#">O que são algoritmos</a></li>
+                                  <li><a href="#">Como construir algoritmos</a></li>
+                                  <li><a href="#">Alguns conceitos fundamentais</a></li>
+                                  <ul>
+                                    <li><a href="#">Variáveis
+                                    <li><a href="#">Comandos de atribuição
+                                    <li><a href="#">Comandos de entrada
+                                    <li><a href="#">Comandos de saída
+                                  </ul>
+                                  <li><a href="#">Estruturas Condicionais</a></li>
+                                  <li><a href="#">Estruturas de Repetição</a></li>
+
+                                  <!-- <ul>
+                                    <li><a href="#">Entrada / Saída de Dados</a></li>
+                                    <li><a href="#">Estruturas Condicionais</a></li>
+                                    <ul>
+                                      <li><a href="#">if-else</a></li>
+                                      <li><a href="#">if-elif-else</a></li>
+                                    </ul>
+                                    <li><a href="#">Estruturas de Repetição</a></li>
+                                    <ul>
+                                      <li><a href="#">while</a></li>
+                                      <li><a href="#">for</a></li>
+                                    </ul>
+                                  </ul> -->
+                                  <li><a href="#exercicios">Exercícios</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </section>
+                </section>
+                <!-- =================== O que São Algoritmos? =================== -->
+                <section>
+                  <section data-markdown data-background="#1A418E">
+                    ### ALGORITMOS
+                    > Sequência lógica de instrução que podem ser executadas para a resolução de um problema
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>ALGORITMOS</h3>
+                    <div class="columns">
+                      <div style="width:70%;"  data-markdown>
+                        - Ordenado
+                        - Finito
+                        - Não ambíguo
+                      </div>
+                      <div class="col">
+                        <img class="plain" src="assets/images/aula01/algoritmo_bg.png" alt="">
+                      </div>
+                    </div>
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>ALGORITMOS</h3>
+                        <img class="plain" src="assets/images/aula01/problema_atravessar_rua.png" alt="">
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>ALGORITMOS</h3>
+                    <div class="columns">
+                      <div class="column">
+                          <img class="plain" style="width:70%;"  src="assets/images/aula01/problema_esvaziar_bolso.png" alt="">
+                      </div>
+                      <div class="column">
+                          <img class="plain" style="width:70%;"  src="assets/images/aula01/problema_trocar_pneu.png" alt="">
+                      </div>
+                    </div>
+                  </section>
+
+                  <section data-background="#1A418E">
+                    <h3>ALGORITMOS</h3>
+                        <img class="plain"  style="width:80%;"  src="assets/images/aula01/problema_trocar_pneu2.png" alt="">
+                  </section>
+
+                  <section data-background="#1A418E">
+                    <h3>Ambiguidade: Qual tipo de macaco?</h3>
+                    <div class="columns">
+                      <div class="column">
+                          <img class="plain" style="width:90%;"  src="assets/images/aula01/macaco_animal.png" alt="">
+                      </div>
+                      <div class="column">
+                          <img class="plain" style="width:90%;"  src="assets/images/aula01/macaco_carro.png" alt="">
+                      </div>
+                    </div>
+                  </section>
+
+                  <section data-background="#1A418E">
+                    <h3>ALGORITMOS</h3>
+                        <img class="plain" src="assets/images/aula01/problema_trocar_pneu3.png" alt="">
+                  </section>
+
+                  <section data-background="#1A418E">
+                    <h3>ALGORITMOS</h3>
+                    <div class="columns">
+                      <div class="column">
+                          <img class="plain" style="width:70%;"  src="assets/images/aula01/receita_ingredientes.png" alt="">
+                      </div>
+                      <div class="column">
+                          <img class="plain" style="width:70%;"  src="assets/images/aula01/receita_algoritmo.png" alt="">
+                      </div>
+                    </div>
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>ALGORITMOS</h3>
+                       <div style="background-color:#fff;">
+                          <img class="plain" style="width:55%;"  src="assets/images/aula01/alg_cubo1.png" alt="">
+                      </div>
+
+                   </section>
+                   <section data-background="#1A418E">
+                     <h3>ALGORITMOS</h3>
+                        <div style="background-color:#fff;">
+                           <img class="plain" style="width:75%;"  src="assets/images/aula01/solving_cube.jpg" alt="">
+                       </div>
+
+                    </section>
+                  </section>
+                <section>
+
+                  <!-- =================== Como construir?  =================== -->
+                  <section data-markdown data-background="#4157AE">
+                    ### Como construir algoritmos?
+                  </section>
+                  <section data-markdown data-background="#4157AE">
+                    ### Algoritmos: Como fazer?
+                    1. Entender o problema
+                    2. 'Bolar' um plano para resolver o problema
+                    3. Executar o Plano
+                    4. Avaliar a solução
+                  </section>
+
+                  <section data-background="#7DC3EC">
+                    <h3 style="color:#4876BF;">Três fases fundamentais</h3>
+                        <img class="plain"  style="width:80%;"  src="assets/images/aula01/fluxo.png" alt="">
+                  </section>
+
+                  <section data-background="#7DC3EC">
+                    <h3 style="color:#4876BF;">Exemplo 1</h3>
+                    <blockquote style="width:100%;background-color:#4876BF;">Escreva um algoritmo que leia um valor em real e mostre o valor em dólar.
+                    </blockquote>
+                        <img class="plain"  style="width:80%;"  src="assets/images/aula01/converter_moeda.png" alt="">
+                  </section>
+                  <section data-background="#7DC3EC">
+                    <h3 style="color:#4876BF;">Exemplo 2</h3>
+                    <blockquote style="width:100%;background-color:#4876BF;">Escreva um algoritmo que calcule a área de um quadrado.
+                    </blockquote>
+                        <img class="plain"  style="width:80%;"  src="assets/images/aula01/calcular_area.png" alt="">
+                  </section>
+                </section>
+                <section>
+
+                <!-- =================== Variáveis =================== -->
+                <section data-markdown data-background="#3399EC">
+                  ### Conceitos fundamentais: Variáveis
+                </section>
+                <section data-background="#3399EC">
+
+                  <h3>Variáveis</h3>
+                  <blockquote style="width:100%;background-color:#1A418E; font-style:normal;">É um local nomeado na memória onde um programador pode armazenar dados.
+                  </blockquote>
+
+                  <div data-markdown>
+                    + e, posteriormente, recuperar dados usando a variável pelo nome.
+                    + O valor varia ao longo do tempo (programa), mas só pode armazenar um valor a cada instante
+                    + Possui nome e tipo (Numérica, Textual ou Boleana)
+                  </div>
+                </section>
+                <section data-background="#3399EC">
+
+                  <h3>Variáveis</h3>
+                  <blockquote style="width:100%;background-color:#1A418E; font-style:normal;">Regras de nomes
+                  </blockquote>
+
+                  <div data-markdown>
+                    + Deve começar com uma  letra ou _
+                    + Pode ser constituído de letras, números e sublinha (underscore).
+                    + Distingue maiúsculo de minúsculo.
+                  </div>
+                  <blockquote style="width:100%;background-color:#fff; font-style:normal;">
+                      <img class="plain"  style="width:80%;"  src="assets/images/aula01/nomes_variaveis.png" alt="">
+
+                  </blockquote>
+
+                </section>
+
+                <section  data-background="#3399EC">
+                  <h3>Tipos de Variáveis</h3>
+                  <blockquote style="width:100%;background-color:#1A418E; font-style:normal;">Variáveis Numéricas
+                  </blockquote>
+                  <p>Armazenam números. Podem ainda classificadas como inteiras, reais (float) ou complexas:</p>
+                  <div data-markdown style="font-size: 1.4em;">
+                    ```python
+                      a = 2019
+                      print(type(a))
+                    ```
+                    ```python
+                      a = 1.5
+                      print(type(a))
+                    ```
+                    ```python
+                      a = 4+3j
+                      print(type(a))
+                    ```
+                  </div>
+
+                </section>
+                <section data-background="#3399EC">
+                  <h3>Tipos de Variáveis</h3>
+                  <blockquote style="width:100%;background-color:#1A418E; font-style:normal;">Variáveis Textuais (String)
+                  </blockquote>
+                  <p>Específicas para dados que contenham letras, números e espaços:</p>
+                  <div data-markdown style="font-size: 1.4em;">
+                  ```python
+                    a = 'Este é 1 exemplo de string'
+                    print(type(a))
+                  ```
+                  ```python
+                    a = "Também pode ser usado aspas duplas"
+                    print(type(a))
+                  ```
+                </div>
+                </section>
+                <section data-background="#3399EC">
+                  <h3>Tipos de Variáveis</h3>
+                  <blockquote style="width:100%;background-color:#1A418E; font-style:normal;">Variáveis Booleanas
+                  </blockquote>
+                  <p>Armazenam somentes dados lógicos: <br>Verdadeiro ou Falso
+                 </p>
+                  <div data-markdown style="font-size: 1.4em;">
+                    ```python
+                    a = True
+                    print(type(a))
+                    ```
+                    ```python
+                    a = False
+                    print(type(a))
+                    ```
+                </section>
+              </section>
+              <section>
+                <section data-markdown data-background="#9936AB">
+                  ### Conceitos fundamentais: Comando de Atribuição
+                </section>
+                <section data-markdown data-background="#9936AB">
+                  ### Comando de Atribuição
+
+                  O comando de atribuição cria novas variáveis e dá valores a elas:
+
+                  ```python
+                  >>> mensagem = "E aí, Tudo bem?"
+                  >>> n = 17
+                  >>> pi = 3.14159
+                  ```
+                </section>
+              </section>
+
+              <section>
+                <section data-markdown data-background="#6744B0">
+                  ### Conceitos fundamentais: Comando de Entrada
+                </section>
+                  <section data-markdown data-background="#6744B0">
+                    ### Comando de Entrada
+
+                    ##  INPUT
+
+                    Para permitir flexibilidade, podemos querer receber a entrada do usuário. Em Python, temos a função input () para permitir isso.
+
+                    ```python
+                    # coding=utf-8
+                    nome = input('Digite o seu nome: \t')
+
+                    ```
+                  </section>
+              </section>
+              <section>
+                <section data-markdown data-background="#57258E">
+                  ### Conceitos fundamentais: Comando de Saída
+                </section>
+                <section data-markdown data-background="#57258E">
+                  ### Comando de Saída
+
+                  ##  PRINT
+
+                  Usamos a função print () para enviar dados para o dispositivo de saída padrão (tela).
+
+                  ```python
+                  # coding=utf-8
+                  disc = 'Algoritmos e Estrutura de Dados'
+                  semestre = '2019.2'
+                  print('Bem vindos à disciplina {} - {}'.format(disc, semestre))
+
+                  ```
+                </section>
+
+                <section data-markdown data-background="#57258E">
+                  ### Formatando a saída c/ print()
+                  Separar por virgula
+                  ```python
+                  x, y, z = 10, 20, 30
+                  print('altura=', x, 'largura=', y, 'profundidade=', z)
+                  ```
+
+                  Marcadores
+                  ```python
+                  print('Hoje é %d de %s de %d.' % (27, 'agosto', 2019) )
+                  print('Hoje é %5d de %s de %d.' % (27,'agosto', 2019) )
+                  ```
+                </section>
+
+                <section data-markdown data-background="#57258E" style="font-size:0.8em">
+                  ### Formatando a saída c/ print()
+
+                  Usando Parametros
+                  ```python
+                  # coding=utf-8
+                  disc = 'Algoritmos e Estrutura de Dados'
+                  semestre = ‘2019.2'
+                  print('Bem vindos à disciplina {} - {}'.format(disc, semestre))
+                  ```
+
+                  Usando Parametros nomeados
+                  ```python
+                  # coding=utf-8
+                  print('Oi, {nome} {sobrenome} '.format(nome = 'John’, sobrenome = 'Oliveira'))
+
+                  ```
+                </section>
+              </section>
+
+                  <!-- =================== Estruturas Condicionais =================== -->
+                  <section>
+                    <section data-background="#333C66">
+                      <h3>Estruturas Condicionais</h3>
+                      <blockquote style="width:100%;background-color:#; font-style:normal;">
+                        Utilizadas para desvio do fluxo do programa
+
+                      </blockquote>
+                      <div data-markdown>
+                      - Condicional Simples (if)
+                      - Condicional Composta(if - else)
+                      - Condicional encadeada
+                      - Condicional aninhada (if-elif-else)
+                      - Exercícios
+                    </div>
+
+                    </section>
+                    <section data-background="#333C66">
+                        <h3>Estruturas Condicionais</h3>
+                        <div class="columns">
+                          <div class="col">
+                            <blockquote style="width:95%;background-color:#; font-style:normal;">Operadores Relacionais</blockquote>
+                            <img class="plain" src="assets/images/aula01/op_relacionais.png" alt="">
+                          </div>
+                          <div class="col">
+                            <blockquote style="width:95%;background-color:#; font-style:normal;">Operadores Booleanos</blockquote>
+                            <img class="plain" src="assets/images/aula01/op_logicos.png" alt="">
+                          </div>
+                        </div>
+                        <div data-markdown style="margin:0;">
+                          ```python
+                          # coding=utf-8
+                          idade = float(input('Digite a sua idade'))
+
+                          maior_de_idade = idade >= 18
+
+                          if not maior_de_idade:
+                            print('Acesso proibido')
+
+                          else:
+                            print('Acesso liberado')
+
+                          ```
+
+                        </div>
+
+                      </section>
+                      <section data-background="#333C66">
+                          <h3>Condicional Simples</h3>
+                          <div class="columns">
+                            <div class="col">
+                              <blockquote style="width:95%;background-color:#; font-style:normal;">
+                                Se um determinado teste for verdadeiro, uma ação será executada.
+                            </div>
+                            <div class="col">
+                              <blockquote style="width:100%;color:#292D34;background-color:#F6F6F6; font-style:normal;">Sintaxe</blockquote>
+                              <div data-markdown>
+                                ```python
+                                if (teste):
+                                  bloco_de_comandos
+
+                                ```
+                              </div>
+                            </div>
+                          </div>
+                          <div data-markdown style="margin:0;">
+                            ```python
+                            # coding=utf-8
+                            n1=float(input('Nota 1:'))
+                            n2=float(input('Nota 2:'))
+                            n3=float(input('Nota 3:'))
+                            media=(n1+n2+n3)/3
+
+                            if(media>=7): 	print('aprovado')
+                            ```
+                          </div>
+                        </section>
+                        <section data-background="#333C66">
+                            <h3>Condicional Composta</h3>
+                            <div class="columns">
+                              <div class="col">
+                                <blockquote style="width:95%;background-color:#; font-style:normal;">
+                                  Se um determinado teste for verdadeiro, uma ação será executada. Caso contrário, outra ação será executada.
+                              </div>
+                              <div class="col">
+                                <blockquote style="width:100%;color:#292D34;background-color:#F6F6F6; font-style:normal;">Sintaxe</blockquote>
+                                <div data-markdown>
+                                  ```python
+                                  if (teste):
+                                    bloco_de_comandos
+                                  else:
+                                    bloco_de_comandos
+
+                                  ```
+                                </div>
+                              </div>
+                            </div>
+                            <div data-markdown style="margin:0;">
+                              ```python
+                              ...
+                              media=(n1+n2+n3)/3
+                              if(media>=7):
+                                print('aprovado')
+                              else:
+                                print('reprovado)
+                              ```
+                            </div>
+                          </section>
+                          <section data-markdown  data-background="#333C66">
+                             ### Condicional Encadeada
+
+                                ```python
+
+                                if(media>=7):
+                                  print('aprovado')
+                                  print('Só alegria!')
+
+                                elif(media>=4):
+                                  print('Prova final')
+                                  print('Vou estudar mais')
+
+                                else:
+                                  print('Reprovado')
+                                  print('Vou estudar MUITO mais')
+                                ```
+                            </section>
+                  </section>
+
+
+                  <!-- =================== Estruturas de Repetição =================== -->
+
+                  <section>
+                    <section data-background="#4F5A7F">
+                      <h3>Estruturas de Repetição</h3>
+                      <blockquote style="width:100%;background-color:#; font-style:normal;">
+                        Em muitos algoritmos, faz-se necessário executar uma sequência de comandos repetidamente, em um laço (loop)
+                      </blockquote>
+
+                      <p>Python fornece os seguintes comandos de repetição:</p>
+                      <blockquote style="width:100%;background-color:#; font-style:normal;">
+                        while  e for
+                      </blockquote>
+                    </section>
+                  </section>
+
+                  <section>
+                    <section data-background="#4F5A7F">
+                      <h3>Estruturas de Repetição: WHILE</h3>
+                    </section>
+                    <section data-background="#4F5A7F">
+                      <h3>while</h3>
+                      <div class="columns">
+                        <div class="col">
+                          <img class="plain" src="assets/images/aula01/flow_while.png" alt="">
+                        </div>
+                          <div style="width:40%;">
+                          <h4>Exemplo</h4>
+                          <div data-markdown>
+                            ```python
+                            x=1
+                            while x<=3:
+                              print('x =', x)
+                              x = x + 1
+                            ```
+                          </div>
+                          <h4>Saída</h4>
+                            <div data-markdown>
+                            ```bash
+                            x = 1
+                            x = 2
+                            x = 3
+                            ```
+                          </div>
+
+                        </div>
+
+                      </div>
+                    </section>
+                    <section data-background="#4F5A7F">
+                      <h3>Comando while</h3>
+                      <blockquote style="width:100%;background-color:#4876BF;">O exemplo a seguir calcula a soma dos números de 1 a 100.
+                      <br>Observe o uso das variáveis i e n para controlar o número de repetições do loop
+                      </blockquote>
+                      <div class="columns">
+                        <div class="col" style="width:65%; margin-right:30px;">
+                          <h4>Exemplo</h4>
+                          <div data-markdown>
+                            ```python
+                            n = 100
+                            soma = 0
+                            i = 1
+                            while (i <= n):
+                                soma = soma + i
+                                i += 1
+                            print("Soma de 1 ate" , n, ":" , soma)
+                            ```
+                          </div>
+                        </div>
+                        <div class="col">
+                          <h4>Saída</h4>
+                            <div data-markdown>
+                            ```bash
+                            Soma de 1 até 100: 5050
+                            ```
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section data-background="#4F5A7F">
+                      <h3>Comando while</h3>
+
+                      <div class="columns">
+                        <div class="col" style="width:50%; margin-right:30px;">
+                          <h4>Exemplo</h4>
+                          <div data-markdown>
+                            ```python
+                            x = 0
+                            while (x < 5):
+                            	print(x)
+                                x += 1
+                            ```
+                          </div>
+                          <h4>Saída</h4>
+                            <div data-markdown>
+                            ```bash
+                            0
+                            1
+                            2
+                            3
+                            4
+                            ```
+                          </div>
+
+                        </div>
+                        <div class="col">
+                          <h4>Exemplo</h4>
+                          <div data-markdown>
+                            ```python
+
+                            while 1:
+                            	print(“Loop infinito”)
+
+                            ```
+                          </div>
+                          <h4>Saída</h4>
+                            <div data-markdown>
+                            ```bash
+                            Loop infinito
+                            Loop infinito
+                            Loop infinito
+                            Loop infinito
+                            ...
+                            ```
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-background="#4F5A7F">
+                      <h3>while com break</h3>
+                      <div class="columns">
+                        <div class="col">
+                          <img width="80%" class="plain" src="assets/images/aula01/flow_while_break.png" alt="">
+                        </div>
+                          <div style="width:40%;">
+                          <h4>Exemplo</h4>
+                          <div data-markdown>
+                            ```python
+                            x=1
+                            while x<=3:
+                              print('x =', x)
+                              break
+                              x = x + 1
+                            ```
+                          </div>
+                          <h4>Saída</h4>
+                            <div data-markdown>
+                            ```bash
+                            x = 1
+
+                            ```
+                          </div>
+
+                        </div>
+
+                      </div>
+                    </section>
+                    <section data-background="#4F5A7F">
+                      <h3>while com break</h3>
+                      <blockquote style="width:100%;background-color:#4876BF;">Às vezes, deseja-se sair do loop imediatamente, quebrando a iteração atual. Para tanto, use o comando break.
+</blockquote>
+                      <div class="columns">
+                        <div class="col" style="width:40%;  margin-right:30px;">
+                          <h4>Exemplo</h4>
+                          <div data-markdown>
+                            ```python
+
+                            x=1
+                            while x<=10:
+                              if (i==5):
+                                break
+                              print('x =', x)
+                              x = x + 1
+                            print(‘o valor de x é', x)
+                            ```
+                          </div>
+                        </div>
+                          <div class="col" style="width:40%;">
+                          <h4>Saída</h4>
+                            <div data-markdown>
+                            ```bash
+                             1
+                             2
+                             3
+                             4
+                             o valor de x é 5
+                            ```
+                            </div>
+
+                        </div>
+
+                      </div>
+                    </section>
+                    <section data-background="#4F5A7F">
+                      <h3>Exercício</h3>
+                      <blockquote style="width:100%;background-color:#4876BF;">
+                        Escreva um programa que escolha aleatoriamente um numero entre 1  e 10, ao qual o usuário deve tentar adivinhar. O jogo acaba quando o usuário acerta ou quando ele desiste (digitando 0).
+
+                      </blockquote>
+
+                    </section>
+
+                    <section data-background="#4F5A7F">
+                      <h3>while com continue</h3>
+                      <div class="columns">
+                        <div class="col">
+                          <img width="80%" class="plain" src="assets/images/aula01/flow_while_break.png" alt="">
+                        </div>
+                          <div style="width:40%;">
+                          <h4>Exemplo</h4>
+                          <div data-markdown>
+                            ```python
+                            x=1
+                            while x<=3:
+                              print('x =', x)
+                              continue
+                              x = x + 1
+                            ```
+                          </div>
+                          <h4>Saída</h4>
+                            <div data-markdown>
+                            ```bash
+
+x = 1
+x = 1
+x = 1
+x = 1
+....
+
+
+                            ```
+                          </div>
+
+                        </div>
+
+                      </div>
+                    </section>
+                    <section data-background="#4F5A7F">
+                      <h3>while com continue</h3>
+                      <blockquote style="width:100%;background-color:#4876BF;">O comando continue promove a interrupção da iteração atual do loop, passando para a seguinte.
+</blockquote>
+                      <div class="columns">
+                        <div class="col" style="width:40%;  margin-right:30px;">
+                          <h4>Exemplo</h4>
+                          <div data-markdown>
+                            ```python
+
+                            i = 0
+                            while (i <= 5):
+                              i += 1
+                              if (i==3):
+                                continue
+                              print(x)
+
+                            ```
+                          </div>
+                        </div>
+                          <div class="col" style="width:40%;">
+                          <h4>Saída</h4>
+                            <div data-markdown>
+                            ```bash
+                            1
+                            2
+                            4
+                            5
+
+                            ```
+                            </div>
+
+                        </div>
+
+                      </div>
+                    </section>
+                    <section data-background="#4F5A7F">
+                      <h3>Quando usar o comando WHILE?</h3>
+                      <blockquote style="width:100%;background-color:#4876BF;">O while é adequado quando não há como determinar quantas iterações vão ocorrer.
+                      </blockquote>
+                      <blockquote style="width:100%;" >Por exemplo: Escreva um algoritmo que leia o código do item pedido, a quantidade e calcule o valor a ser pago por aquele lanche. <u>O algoritmo só finaliza se o código informado por -999</u>.
+                      </blockquote>
+                    </section>
+                    <section data-background="#4F5A7F">
+                      <h3>Exercício</h3>
+                      <div class="columns">
+                        <div class="col">
+                          <blockquote style="width:100%;" >Escreva um programa que calcule e mostre o seno dos ângulos entre 0 e 360 (de 10 em 10).
+                            <p><u>dica: Use a função sin do pacote math</u></p>
+                          </blockquote>
+                        </div>
+
+                        <div class="col">
+                          <img width="100%" class="plain" src="assets/images/aula01/saida_seno_com_while.png" alt="">
+                        </div>
+                      </div>
+
+                    </section>
+
+                  </section>
+
+                  <section>
+                    <section data-background="#2C465A">
+                      <h3>Estruturas de Repetição: <br>FOR</h3>
+                    </section>
+
+                    <section data-background="#2C465A">
+                      <h3>FOR</h3>
+                      <blockquote style="width:100%;">O loop <u>for</u> de Python é baseado em iteradores, ou seja, ele percorre uma sequência de itens e realiza as ações apropriadas sobre cada um deles
+</blockquote>
+
+<p>Os itens podem ser elementos de listas, tuplas, strings, chaves de dicionários e outros ”iterables”
+</p>
+                    </section>
+                    <section data-background="#2C465A">
+                      <h3>FOR</h3>
+                      <div class="columns">
+                        <div class="col">
+                          <p>Exemplo</p>
+                          <div data-markdown>
+                            ```python
+                             for item in ['1o','2o', '3o']:
+                               print(item)
+                            ```
+                          </div>
+
+                          <blockquote style="width:100%;">
+                            O for é adequado quando pode-se determinar quantas iterações vão ocorrer ou há uma sequência a seguir.
+
+                          </blockquote>
+                        </div>
+
+                      </div>
+                    </section>
+                    <section data-markdown data-background="#2C465A">
+                      ### Comando FOR
+
+                      - O break interrompe completamente o laço.
+                      - O continue passa para a próxima iteração.
+                      - O else é executado ao final do laço, a não ser que o laço tenha sido interrompido por break.
+                    </section>
+                    <section data-markdown data-background="#2C465A">
+                      ### Exercício
+
+                      - Escreva um programa que some todos os números entre 0 e 99.
+
+                    </section>
+                    <section data-markdown data-background="#2C465A">
+                      ### Exercício
+
+                      - Escreva um programa que mostre todos os multiplos de 5 entre 0 e 50.
+
+                  </section>
+                  <section data-markdown data-background="#2C465A">
+                    ### Exercício
+
+                    - Escreva um programa que mostre os dias da semana.
+
+                  </section>
+                </section>
+                <section>
+                  <section data-markdown data-background="#2C465A">
+                    ### Repetições Aninhadas
+                  </section>
+                  <section data-markdown data-background="#2C465A">
+                    ### Repetições Aninhadas
+
+                    - É possível utilizar repetições dentro de outras repetições
+
+                    > Exemplo:  Tabela de multiplicação de 0 a 10 usando while.
+
+                  </section>
+                  <section data-background="#2C465A">
+                    <h3>Repetição Aninhada</h3>
+                    <div data-markdown>
+                      ```python
+                      i = 0
+                      while i<= 10:
+                        j = 0
+                        print('===== TABUADA DE ===== '.format(i))
+                        while j<=10:
+                          print('{}x{}={}'.format(i,j,i*j))
+                          j=j+1
+                        i=i+1
+                      ```
+                    </div>
+                  </section>
+
+                  <section data-background="#2C465A">
+                    <h3>Repetição Aninhada</h3>
+                    <div style="background-color:white;">
+                      <img class="plain" src="assets/images/aula01/exemplo_tabuada.png" alt="">
+                    </div>
+                  </section>
+
+
+
+              </section>
+              <section>
+                   <section data-background="#6F59AE">
+                    <h2>Exercícios</h2>
+
+                  </section>
+                   <section data-background="#46349D">
+                    <blockquote class="w100">
+                      01 - Desenvolver um algoritmo que leia a altura de 15 pessoas. Este programa deverá calcular e
+mostrar : <br>
+a) A menor altura do grupo; <br>
+b) A maior altura do grupo;
+                    </blockquote>
+                  </section>
+                  <section data-background="#46349D">
+                    <blockquote class="w100">
+                      02 - Desenvolver um algoritmo que leia um número não determinado de valores e calcule e escreva a
+média aritmética dos valores lidos, a quantidade de valores positivos, a quantidade de valores
+negativos e o percentual de valores negativos e positivos
+                    </blockquote>
+                  </section>
+                  <section data-background="#46349D">
+                    <blockquote class="w100">
+                      03 - Escrever um algoritmo que leia uma quantidade desconhecida de números e conte quantos deles
+estão nos seguintes intervalos: [0-25], [26-50], [51-75] e [76-100]. A entrada de dados deve
+terminar quando for lido um número negativo
+                    </blockquote>
+                  </section>
+                  <section data-background="#46349D">
+                    <blockquote class="w100">
+                      04 -  Faça um algoritmo estruturado que leia uma quantidade não determinada de números positivos.
+Calcule a quantidade de números pares e ímpares, a média de valores pares e a média geral dos
+números lidos. O número que encerrará a leitura será zero
+                    </blockquote>
+                  </section>
+                  <section data-background="#46349D">
+                    <blockquote class="w100">
+                      05 - Escrever um algoritmo que gera e escreve os números ímpares entre 100 e 200.
+                    </blockquote>
+                  </section>
+                  <section data-background="#46349D">
+                    <blockquote class="w100">
+                      06 -  Escreva um algoritmo que leia um valor inicial A e uma razão R e imprima uma seqüência em
+P.A. contendo 10 valores.
+                    </blockquote>
+                  </section>
+                  <section data-background="#46349D">
+                    <blockquote class="w100">
+                      07 -  Escreva um algoritmo que leia um valor inicial A e uma razão R e imprima uma seqüência em
+P.G. contendo 10 valores.
+                    </blockquote>
+                  </section>
+                  <section data-background="#46349D">
+                    <blockquote class="w100">
+                      08 - Escreva um algoritmo que leia um valor inicial A e imprima a seqüência de valores do cálculo de
+A! e o seu resultado. Ex: 5! = 5 X 4 X 3 X 2 X 1 = 120
+                    </blockquote>
+                  </section>
+                  <section data-background="#46349D">
+                    <blockquote class="w100">
+                      09 - O restaurante a quilo Bem-Bom cobra R$52,90 por cada quilo de refeição. Escreva um algoritmo
+que leia o peso do prato montado pelo cliente (em quilos) e imprima o valor a pagar. Assuma que a balança já desconte o peso do prato.
+                    </blockquote>
+                  </section>
+                </section>
+             </div>
+        </div>
+
+        <script src="assets/lib/js/head.min.js"></script>
+        <script src="assets/js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                dependencies: [
+                    { src: 'assets/plugin/markdown/marked.js' },
+                    { src: 'assets/plugin/markdown/markdown.js' },
+                    { src: 'assets/plugin/notes/notes.js', async: true },
+                    { src: 'assets/plugin/zoom-js/zoom.js', async: true },
+                    { src: 'assets/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+
+
+
+    </body>
+</html>
