@@ -1,400 +1,418 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <title>Aula 00 - Algoritmos e Estrutura de Dados</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <link rel="stylesheet" href="assets/css/reveal.css">
-        <!-- <link rel="stylesheet" href="css/theme/black.css"> -->
-        <link rel="stylesheet" href="assets/css/theme/night.css">
+  <title>Aula 00 - Algoritmos e Estrutura de Dados</title>
 
-        <!-- Theme used for syntax highlighting of code -->
-        <link rel="stylesheet" href="assets/lib/css/zenburn.css">
+  <link rel="stylesheet" href="assets/css/reveal.css">
+  <!-- <link rel="stylesheet" href="css/theme/black.css"> -->
+  <link rel="stylesheet" href="assets/css/theme/night.css">
 
-        <!-- Custom CSS-->
-        <link rel="stylesheet" href="assets/css/custom.css">
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="assets/lib/css/zenburn.css">
 
-        <!-- Printing and PDF exports -->
-        <script>
-            var link = document.createElement( 'link' );
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = window.location.search.match( /print-pdf/gi ) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
-            document.getElementsByTagName( 'head' )[0].appendChild( link );
-        </script>
+  <!-- Custom CSS-->
+  <link rel="stylesheet" href="assets/css/custom.css">
 
-        <!-- Manual style tweaks -->
-        <style>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
 
-        </style>
-    </head>
-    <body>
-      <div class="reveal">
-          <div class="slides">
-            <!-- =================== CAPA =================== -->
-              <section>
-                <section data-background-image="assets/images/capa00.jpg">
-                      <blockquote style="width:100%; opacity:0.8; background-color:#1D477C; font-style:normal;" >
-                        <h1>AED</h1>
-                        <p>(Algoritmos e Estrutura de Dados)</p>
-                         <p>Aula 00 – Apresentação da Disciplina</p>
-                      </blockquote>
+  <!-- Manual style tweaks -->
+  <style>
 
+  </style>
+</head>
 
-                  </section>
-                </section>
-                <!-- =================== UFMA / ECP =================== -->
-                  <section>
-                    <section id="ufma" data-background="#B50D1A">
-                      <div class="columns">
-                          <div style="width:30%;" >
-                            <img style="width:100%;" class="plain" src="assets/images/ufma.png" alt="">
-                          </div>
-                          <div class="col">
-                            <p>Universidade Federal do Maranhão</p>
-                            <h2>UFMA</h2>
-                          </div>
-                      </div>
-                    </section>
-                    <section data-background="#486dad">
-                             <img style="width:100%;" class="plain" src="assets/images/ercemapi_2019.png" alt="">
-                             <blockquote style="width:100%; opacity:0.8; background-color:#2b436b; font-style:normal;" >
-                               Data: 25, 26 e 27 de setembro de 2019<br>
-                               Mais informações: https://pet.ufma.br/ercemapi/
-                             </blockquote>
-                    </section>
-
-                    <section id="ecp" data-background="#fff">
-                            <img class="plain" src="assets/images/ecp_banner.png" alt="">
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- =================== CAPA =================== -->
+      <section>
+        <section data-background-image="assets/images/capa00.jpg">
+          <blockquote style="width:100%; opacity:0.8; background-color:#1D477C; font-style:normal;">
+            <h1>AED</h1>
+            <p>(Algoritmos e Estrutura de Dados)</p>
+            <p>Aula 00 – Apresentação da Disciplina</p>
+          </blockquote>
 
 
-                            <blockquote style="width:100%; opacity:0.8; background-color:#007F9E; font-style:normal;" >
-                              BICT <br>
-                              Abertura de Edital de Monitoria <br>
-                              (diversas disciplinas)<br>
-                              Mais informações: http://bict.ufma.br
+        </section>
+      </section>
+      <!-- =================== UFMA / ECP =================== -->
+      <section>
+        <section id="ufma" data-background="#B50D1A">
+          <div class="columns">
+            <div style="width:30%;">
+              <img style="width:100%;" class="plain" src="assets/images/ufma.png" alt="">
+            </div>
+            <div class="col">
+              <p>Universidade Federal do Maranhão</p>
+              <h2>UFMA</h2>
+            </div>
+          </div>
+        </section>
+        <section data-background="#486dad">
+          <img style="width:100%;" class="plain" src="assets/images/ercemapi_2019.png" alt="">
+          <blockquote style="width:100%; opacity:0.8; background-color:#2b436b; font-style:normal;">
+            Data: 25, 26 e 27 de setembro de 2019<br>
+            Mais informações: https://pet.ufma.br/ercemapi/
+          </blockquote>
+        </section>
 
-                            </blockquote>
-                    </section>
-                  </section>
-                <!-- =================== CONTEUDO DA APRESENTAÇÃO =================== -->
-                <section>
-                  <section id="conteudo">
-                      <h3>Conteúdo</h3>
-                      <div class="columns">
-                          <div class="col">
-                              <ul style="font-size:0.9em">
-                                  <li><a href="#">About me</a></li>
-                                  <li><a href="#">Sobre a Disciplina</a></li>
-                                  <ul>
-                                    <li><a href="#">Ementa</a></li>
-                                    <li><a href="#">Objetivos e Competências</a></li>
-                                    <li><a href="#">Metodologia e Recursos</a></li>
-                                    <li><a href="#">Habilidades</a></li>
-                                  </ul>
-                                  <li><a href="#">Conteúdo Programático</a></li>
-                                  <li><a href="#">Processo Avaliativo</a></li>
-                              </ul>
-                          </div>
-                      </div>
-                  </section>
-                </section>
-                <!-- =================== ABOUT ME =================== -->
-                <section>
-                  <section id="aboutme" data-background="#BF406C">
-                    <h3> ABOUT ME </h3>
-                    <h5>Profa. Me. Alana de A. Oliveira M. Teixeira</h5>
-                          <ul style="font-size:0.7em">
-                              <li>Profa. do Curso de Engenharia da Computação da UFMA desde 2016</li>
-                              <li>Site Institucional: <a target="_blank" href="http://www.ecp.ufma.br/alana">www.ecp.ufma.br/alana</a></li>
-                              <li>Currículo Lattes: <a href="http://lattes.cnpq.br/6253527692814293"> http://lattes.cnpq.br/6253527692814293</a></li>
-                              <li>E-mail: alana@ecp.ufma.br</li>
-
-                            </ul>
-                  </section>
-                  <section data-background="#BF406C">
-                    <h3>Profa. Me. Alana de A. Oliveira M. Teixeira</h3>
-                          <ul style="font-size:0.7em">
-                              <li>Graduação em Ciência da Computação pela UFMA</li>
-                              <li>Mestrado em Ciência  da Computação pela UFMA</li>
-                              <li>MBA em Gerenciamento de Projeto pelo ISAN/FGV</li>
-                              <li>Doutoranda em Ciência  da Computação pela UFMA</li>
-                            </ul>
-                  </section>
+        <section id="ecp" data-background="#fff">
+          <img class="plain" src="assets/images/ecp_banner.png" alt="">
 
 
-                  <section data-background="#BF406C">
-                        <h3>Minhas Áreas de Interesse</h3>
-                        <div class="columns">
-                            <div class="col">
-                                <ul style="font-size:0.9em">
-                                    <li>Análise de Aprendizagem</li>
-                                    <li>Jogos Sérios (Educacionais)</li>
-                                    <li>Gamificação</li>
-                                    <li>Informática na Educação</li>
-                                    <li>Desenvolvimento Web</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
+          <blockquote style="width:100%; opacity:0.8; background-color:#007F9E; font-style:normal;">
+            BICT <br>
+            Abertura de Edital de Monitoria <br>
+            (diversas disciplinas)<br>
+            Mais informações: http://bict.ufma.br
 
-                    <section data-background="#BF406C">
-                      <h2> Antes ... </h2>
-                            <ul style="font-size:0.9em">
-                                <li>Professora - UNDB</li>
-                                <li>Freelance</li>
-                                <li>ALUMAR </li>
-                                <li>SEDUC /FUNDAÇÃO GOMES DE SOUZA </li>
-                              </ul>
-                    </section>
-                </section>
+          </blockquote>
+        </section>
+      </section>
+      <!-- =================== CONTEUDO DA APRESENTAÇÃO =================== -->
+      <section>
+        <section id="conteudo">
+          <h3>Conteúdo</h3>
+          <div class="columns">
+            <div class="col">
+              <ul style="font-size:0.9em">
+                <li><a href="#">About me</a></li>
+                <li><a href="#">Sobre a Disciplina</a></li>
+                <ul>
+                  <li><a href="#">Ementa</a></li>
+                  <li><a href="#">Objetivos e Competências</a></li>
+                  <li><a href="#">Metodologia e Recursos</a></li>
+                  <li><a href="#">Habilidades</a></li>
+                </ul>
+                <li><a href="#">Conteúdo Programático</a></li>
+                <li><a href="#">Processo Avaliativo</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- =================== ABOUT ME =================== -->
+      <section>
+        <section id="aboutme" data-background="#BF406C">
+          <h3> ABOUT ME </h3>
+          <h5>Profa. Me. Alana de A. Oliveira M. Teixeira</h5>
+          <ul style="font-size:0.7em">
+            <li>Profa. do Curso de Engenharia da Computação da UFMA desde 2016</li>
+            <li>Site Institucional: <a target="_blank" href="http://www.ecp.ufma.br/alana">www.ecp.ufma.br/alana</a></li>
+            <li>Currículo Lattes: <a href="http://lattes.cnpq.br/6253527692814293"> http://lattes.cnpq.br/6253527692814293</a></li>
+            <li>E-mail: alana@ecp.ufma.br</li>
 
-                <!-- =================== Disciplina =================== -->
-                <section>
-                  <section id="disciplina" data-background="#3095BD">
-                    <h3> SOBRE A DISCIPLINA </h3>
-                    <div data-markdown>
-                     - Nome: Algoritmos e Estruturas de Dados)
-                     - Sequencia Aconselhada: 4º semestre
-                     - Carga Horária: 60 horas (Teoria e prática)
-                   </div>
-
-
-                  </section>
-                  <section data-markdown data-background="#3095BD" style="font-size:0.9em">
-                   ### Ementa
-                   - Recursividade.
-                   - Tipos Abstratos de Dados.
-                   - Estruturas de dados básicas: Listas lineares - pilhas, filas, listas encadeadas.
-                   - Árvores e Aplicações. Árvores binárias: árvore de busca, árvores balanceadas e heaps.
-                   - Ordenação. Noções de complexidade
-                 </section>
-
-                 <section data-markdown data-background="#3095BD" style="font-size:0.9em">
-                   ### Objetivos
-                   - Adquirir conhecimento sobre a utilização otimizada das diversas estruturas de dados apresentadas, levando em consideração o problema a ser resolvido ou otimizado, e também o contexto no qual ocorre esse problema.
-                 </section>
-                 <section data-markdown data-background="#3095BD" style="font-size:0.9em">
-                   ### Competência
-                   - Compreender os conceitos fundamentais associados aos vários tipos de estruturas de dados sequenciais (listas ligadas, pilhas e fila) e não sequenciais (árvores), e dos algoritmos passíveis de aplicação a cada estrutura.
-                 </section>
-                 <section data-markdown data-background="#3095BD" style="font-size:0.9em">
-                   ### Metodologia
-                   - A disciplina será trabalhada com aulas expositivo-dialogadas, onde serão fornecidos os componentes teóricos e será feita a prática de exercícios.
-                 </section>
-                 <section data-markdown data-background="#3095BD" style="font-size:0.9em">
-                   ### Recursos
-                   - Quadro branco, marcador, notebook e projetor multimídia;
-                 </section>
-
-                 <section data-markdown data-background="#3095BD" style="font-size:0.9em">
-                    ## Bibliografia Básica
-
-                    1. LEISERSON, C. E., STEIN, C., RIVEST, R. L., CORMEN, T. H., Algoritmos – Teoria e Prática, 2ª Ed., Rio de
-                    Janeiro: Editora Capus/Elsevier 2002.
-                    2. ZIVIANI, N. Projeto de algoritmos. São Paulo: Cengange Learning. 2012.
-                    3. HOLLOWAY, J. P. Introdução a programação para engenharia: resolvendo problemas com algoritmos. RIO DE
-                    JANEIRO: LTC. 2006
-
-                  </section>
-
-                  <section data-background="#3095BD">
-                    <h3>Bibliografia Básica</h3>
-                    <div class="columns">
-                        <div class="col">
-                          <img style="width:80%;" class="plain" src="assets/images/bibiografia/basica_aed1.png" alt="">
-                        </div>
-                        <div class="col">
-                          <img style="width:80%;" class="plain" src="assets/images/bibiografia/basica_aed2.png" alt="">
-                        </div>
-                        <div class="col">
-                          <img style="width:80%;" class="plain" src="assets/images/bibiografia/basica_aed3.png" alt="">
-                        </div>
-
-                    </div>
-                  </section>
-
-                  <section data-markdown style="font-size:0.7em" data-background="#3095BD">
-                    ## Bibliografia Complementar
-                    1. GOODRICH, M., Estruturas de Dados e Algoritmos em Java, 2ª Ed., Bookman, 2002.
-                    2. CELES, W., Introdução a Estrutura de Dados: com técnicas de programação em C, Campus, 2004
-                    3. SZWARCFITER, J. L. MARKENSON, L. Estruturas de dados e seus algoritmos. Rio de Janeiro: LTC. 1994
-                    4. PINTO, Wilson Silva. Introdução ao desenvolvimento de algoritmos e estruturas de dados. SAO PAULO:
-                    ERICA. 1990
-                    5. TENENBAUM, A., LANGSAM, Y. Estruturas de Dados usando C, Makron Books, 1995.
-
-                  </section>
-                  <section data-background="#3095BD">
-                    <h3>Bibliografia Complementar</h3>
-                    <div class="columns">
-                        <div class="col">
-                          <img style="width:80%;" class="plain" src="assets/images/bibiografia/complementar_aed1.png" alt="">
-                        </div>
-                        <div class="col">
-                          <img style="width:80%;" class="plain" src="assets/images/bibiografia/complementar_aed2.png" alt="">
-                        </div>
-                        <div class="col">
-                          <img style="width:80%;" class="plain" src="assets/images/bibiografia/complementar_aed3.png" alt="">
-                        </div>
-                        <div class="col">
-                          <img style="width:80%;" class="plain" src="assets/images/bibiografia/complementar_aed4.png" alt="">
-                        </div>
-                        <div class="col">
-                          <img style="width:80%;" class="plain" src="assets/images/bibiografia/complementar_aed5.png" alt="">
-                        </div>
-                    </div>
-                  </section>
+          </ul>
+        </section>
+        <section data-background="#BF406C">
+          <h3>Profa. Me. Alana de A. Oliveira M. Teixeira</h3>
+          <ul style="font-size:0.7em">
+            <li>Graduação em Ciência da Computação pela UFMA</li>
+            <li>Mestrado em Ciência da Computação pela UFMA</li>
+            <li>MBA em Gerenciamento de Projeto pelo ISAN/FGV</li>
+            <li>Doutoranda em Ciência da Computação pela UFMA</li>
+          </ul>
+        </section>
 
 
-                </section>
-                <section>
-                  <section data-markdown data-background="#B50D1A" style="font-size:0.9em">
-                    ## Importante:
-                    - Atividades extraclasses (estudo, discussão, trabalhos): obrigatórias!
-                    - SIGAA: avisos, datas, tarefas e material
-                  </section>
-                  <section data-background="#2F668E" style="font-size:1em">
-                          <img style="width:20%;" class="plain" src="assets/images/warning.png" alt="">
-                          <h3>Para um bom desempenho </h3>
-                          <h4>(principalmente programação)</h4>
-                  </section>
-                  <section data-background="#2F668E" style="font-size:0.9em">
-                    <h3>Ao final de cada aula, tente aplicar os conhecimentos no computador.</h3>
-                    <img style="width:50%;" class="plain" src="assets/images/coding_2.png" alt="">
-                  </section>
-                  <section data-background="#2F668E" style="font-size:0.9em">
-                    <h3>Não deixe de tirar dúvidas</h3>
-                    <img style="width:50%;" class="plain" src="assets/images/asking_2.png" alt="">
-                  </section>
-                  <section data-background="#2F668E" style="font-size:0.9em">
-                    <h3>Resolva a maior quantidade de exercícios sobre o assunto.</h3>
-                    <img style="width:50%;" class="plain" src="assets/images/coding_3.png" alt="">
-                  </section>
-                  <section data-background="#2F668E" style="font-size:0.9em">
-                    <h3>Estude os conteúdos futuros.</h3>
-                    <img style="width:50%;" class="plain" src="assets/images/searching.png" alt="">
-                  </section>
-                  <section data-background="#2F668E" style="font-size:0.9em">
-                    <h3>Compartilhe suas dúvidas e busque soluções.</h3>
-                    <img style="width:50%;" class="plain" src="assets/images/solution.png" alt="">
-                  </section>
-                </section>
+        <section data-background="#BF406C">
+          <h3>Minhas Áreas de Interesse</h3>
+          <div class="columns">
+            <div class="col">
+              <ul style="font-size:0.9em">
+                <li>Análise de Aprendizagem</li>
+                <li>Jogos Sérios (Educacionais)</li>
+                <li>Gamificação</li>
+                <li>Informática na Educação</li>
+                <li>Desenvolvimento Web</li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-                <!-- =================== CONTEUDO PROGRAMÁTICO =================== -->
-                  <section>
-                    <section data-markdown  id="contprogramatico" data-background="#3D2877">
-                      ### CONTEÚDO PROGRAMÁTICO
-                    </section>
-                    <section data-markdown  id="contprogramatico" data-background="#3D2877" style="font-size:0.7em">
-                      ## PARTE 1
+        <section data-background="#BF406C">
+          <h2> Antes ... </h2>
+          <ul style="font-size:0.9em">
+            <li>Professora - UNDB</li>
+            <li>Freelance</li>
+            <li>ALUMAR </li>
+            <li>SEDUC /FUNDAÇÃO GOMES DE SOUZA </li>
+          </ul>
+        </section>
+      </section>
 
-                      + REVISÃO DE FUNDAMENTOS:
-                          + Estuturas Condicionais (if-else e if-elif)
-                          + Estruturas de Repetição (for e while)
-                      +  LISTAS
-                      +  TUPLAS
-                      +  STRINGS
-                      +  RECURSIVIDADE
-                      +  DICIONÁRIOS
+      <!-- =================== Disciplina =================== -->
+      <section>
+        <section id="disciplina" data-background="#3095BD">
+          <h3> SOBRE A DISCIPLINA </h3>
+          <div data-markdown>
+            - Nome: Algoritmos e Estruturas de Dados)
+            - Sequencia Aconselhada: 4º semestre
+            - Carga Horária: 60 horas (Teoria e prática)
+          </div>
 
 
-                    </section>
-                    <section data-markdown  id="contprogramatico" data-background="#3D2877" style="font-size:0.8em">
-                      ## PARTE 2
+        </section>
+        <section data-markdown data-background="#3095BD" style="font-size:0.9em">
+          ### Ementa
+          - Recursividade.
+          - Tipos Abstratos de Dados.
+          - Estruturas de dados básicas: Listas lineares - pilhas, filas, listas encadeadas.
+          - Árvores e Aplicações. Árvores binárias: árvore de busca, árvores balanceadas e heaps.
+          - Ordenação. Noções de complexidade
+        </section>
 
-                      +  ALGORITMOS DE BUSCA E ORDENAÇÃO
+        <section data-markdown data-background="#3095BD" style="font-size:0.9em">
+          ### Objetivos
+          - Adquirir conhecimento sobre a utilização otimizada das diversas estruturas de dados apresentadas, levando em consideração o problema a ser resolvido ou otimizado, e também o contexto no qual ocorre esse problema.
+        </section>
+        <section data-markdown data-background="#3095BD" style="font-size:0.9em">
+          ### Competência
+          - Compreender os conceitos fundamentais associados aos vários tipos de estruturas de dados sequenciais (listas ligadas, pilhas e fila) e não sequenciais (árvores), e dos algoritmos passíveis de aplicação a cada estrutura.
+        </section>
+        <section data-markdown data-background="#3095BD" style="font-size:0.9em">
+          ### Metodologia
+          - A disciplina será trabalhada com aulas expositivo-dialogadas, onde serão fornecidos os componentes teóricos e será feita a prática de exercícios.
+        </section>
+        <section data-markdown data-background="#3095BD" style="font-size:0.9em">
+          ### Recursos
+          - Quadro branco, marcador, notebook e projetor multimídia;
+        </section>
 
-                      +  INTRODUÇÃO A ORIENTAÇÃO A OBJETOS
+        <section data-markdown data-background="#3095BD" style="font-size:0.9em">
+          ## Bibliografia Básica
 
-                      +  PILHAS
+          1. LEISERSON, C. E., STEIN, C., RIVEST, R. L., CORMEN, T. H., Algoritmos – Teoria e Prática, 2ª Ed., Rio de
+          Janeiro: Editora Capus/Elsevier 2002.
+          2. ZIVIANI, N. Projeto de algoritmos. São Paulo: Cengange Learning. 2012.
+          3. HOLLOWAY, J. P. Introdução a programação para engenharia: resolvendo problemas com algoritmos. RIO DE
+          JANEIRO: LTC. 2006
 
-                      +  FILAS
+        </section>
+
+        <section data-background="#3095BD">
+          <h3>Bibliografia Básica</h3>
+          <div class="columns">
+            <div class="col">
+              <img style="width:80%;" class="plain" src="assets/images/bibiografia/basica_aed1.png" alt="">
+            </div>
+            <div class="col">
+              <img style="width:80%;" class="plain" src="assets/images/bibiografia/basica_aed2.png" alt="">
+            </div>
+            <div class="col">
+              <img style="width:80%;" class="plain" src="assets/images/bibiografia/basica_aed3.png" alt="">
+            </div>
+
+          </div>
+        </section>
+
+        <section data-markdown style="font-size:0.7em" data-background="#3095BD">
+          ## Bibliografia Complementar
+          1. GOODRICH, M., Estruturas de Dados e Algoritmos em Java, 2ª Ed., Bookman, 2002.
+          2. CELES, W., Introdução a Estrutura de Dados: com técnicas de programação em C, Campus, 2004
+          3. SZWARCFITER, J. L. MARKENSON, L. Estruturas de dados e seus algoritmos. Rio de Janeiro: LTC. 1994
+          4. PINTO, Wilson Silva. Introdução ao desenvolvimento de algoritmos e estruturas de dados. SAO PAULO:
+          ERICA. 1990
+          5. TENENBAUM, A., LANGSAM, Y. Estruturas de Dados usando C, Makron Books, 1995.
+
+        </section>
+        <section data-background="#3095BD">
+          <h3>Bibliografia Complementar</h3>
+          <div class="columns">
+            <div class="col">
+              <img style="width:80%;" class="plain" src="assets/images/bibiografia/complementar_aed1.png" alt="">
+            </div>
+            <div class="col">
+              <img style="width:80%;" class="plain" src="assets/images/bibiografia/complementar_aed2.png" alt="">
+            </div>
+            <div class="col">
+              <img style="width:80%;" class="plain" src="assets/images/bibiografia/complementar_aed3.png" alt="">
+            </div>
+            <div class="col">
+              <img style="width:80%;" class="plain" src="assets/images/bibiografia/complementar_aed4.png" alt="">
+            </div>
+            <div class="col">
+              <img style="width:80%;" class="plain" src="assets/images/bibiografia/complementar_aed5.png" alt="">
+            </div>
+          </div>
+        </section>
 
 
-                    </section>
-                    <section data-markdown  id="contprogramatico" data-background="#3D2877" style="font-size:0.8em">
-                     ### PARTE 3
+      </section>
+      <section>
+        <section data-markdown data-background="#B50D1A" style="font-size:0.9em">
+          ## Importante:
+          - Atividades extraclasses (estudo, discussão, trabalhos): obrigatórias!
+          - SIGAA: avisos, datas, tarefas e material
+        </section>
+        <section data-background="#2F668E" style="font-size:1em">
+          <img style="width:20%;" class="plain" src="assets/images/warning.png" alt="">
+          <h3>Para um bom desempenho </h3>
+          <h4>(principalmente programação)</h4>
+        </section>
+        <section data-background="#2F668E" style="font-size:0.9em">
+          <h3>Ao final de cada aula, tente aplicar os conhecimentos no computador.</h3>
+          <img style="width:50%;" class="plain" src="assets/images/coding_2.png" alt="">
+        </section>
+        <section data-background="#2F668E" style="font-size:0.9em">
+          <h3>Não deixe de tirar dúvidas</h3>
+          <img style="width:50%;" class="plain" src="assets/images/asking_2.png" alt="">
+        </section>
+        <section data-background="#2F668E" style="font-size:0.9em">
+          <h3>Resolva a maior quantidade de exercícios sobre o assunto.</h3>
+          <img style="width:50%;" class="plain" src="assets/images/coding_3.png" alt="">
+        </section>
+        <section data-background="#2F668E" style="font-size:0.9em">
+          <h3>Estude os conteúdos futuros.</h3>
+          <img style="width:50%;" class="plain" src="assets/images/searching.png" alt="">
+        </section>
+        <section data-background="#2F668E" style="font-size:0.9em">
+          <h3>Compartilhe suas dúvidas e busque soluções.</h3>
+          <img style="width:50%;" class="plain" src="assets/images/solution.png" alt="">
+        </section>
+      </section>
 
-                     + LISTAS ENCADEADAS
-                     + TEORIA DE ÁRVORES
-                     + ÁRVORES BINÁRIAS
-                     + TEORIA DE ÁRVORE BINÁRIA DE BUSCA
-                     + NOÇÕES DE COMPLEXIDADE DE ALGORITMOS
-                    </section>
+      <!-- =================== CONTEUDO PROGRAMÁTICO =================== -->
+      <section>
+        <section data-markdown id="contprogramatico" data-background="#3D2877">
+          ### CONTEÚDO PROGRAMÁTICO
+        </section>
+        <section data-markdown id="contprogramatico" data-background="#3D2877" style="font-size:0.7em">
+          ## PARTE 1
 
-                    <section data-markdown data-background="#3D2877" style="font-size:0.9em">
-                      <script type="text/template">
-                        ### Ao final desta Unidade Curricular o aluno deve ser capaz de:
+          + REVISÃO DE FUNDAMENTOS:
+          + Estuturas Condicionais (if-else e if-elif)
+          + Estruturas de Repetição (for e while)
+          + LISTAS
+          + TUPLAS
+          + STRINGS
+          + RECURSIVIDADE
+          + DICIONÁRIOS
+
+
+        </section>
+        <section data-markdown id="contprogramatico" data-background="#3D2877" style="font-size:0.8em">
+          ## PARTE 2
+
+          + ALGORITMOS DE BUSCA E ORDENAÇÃO
+
+          + INTRODUÇÃO A ORIENTAÇÃO A OBJETOS
+
+          + PILHAS
+
+          + FILAS
+
+
+        </section>
+        <section data-markdown id="contprogramatico" data-background="#3D2877" style="font-size:0.8em">
+          ### PARTE 3
+
+          + LISTAS ENCADEADAS
+          + TEORIA DE ÁRVORES
+          + ÁRVORES BINÁRIAS
+          + TEORIA DE ÁRVORE BINÁRIA DE BUSCA
+          + NOÇÕES DE COMPLEXIDADE DE ALGORITMOS
+        </section>
+
+        <section data-markdown data-background="#3D2877" style="font-size:0.9em">
+          <script type="text/template">
+            ### Ao final desta Unidade Curricular o aluno deve ser capaz de:
                         - Desenvolver competências de algoritmia, em particular em problemas que envolvam recursividade, ordenação e/ou pesquisa;<!-- .element: class="fragment" data-fragment-index="1" -->
                         - Idealizar, esquematizar e implementar estruturas de dados e respectivos algoritmos com vista à resolução de problemas.<!-- .element: class="fragment" data-fragment-index="2" -->
                         - Analisar a eficiência dos algoritmos, através da análise de complexidade, de forma a usar os algoritmos mais eficientes na resolução do problema em questão;<!-- .element: class="fragment" data-fragment-index="3" -->
                       </script>
-                    </section>
-                  </section>
+        </section>
+      </section>
 
-                <!-- =================== AVALIACOES ================== -->
-                  <section>
-                    <section data-markdown  id="avaliacoes" data-background="#162841">
-                      ### PROCESSO AVALIATIVO
-                      Avaliações: A avaliação será realizada mediante 3 provas escritas e três trabalho prático e/ou lista de exercícios (passível de alterações).
-                      - 1º avaliação: teórica (70%) + prática (30%)
-                      - 2º avaliação: teórica (70%) + prática (30%)
-                      - 3º avaliação: teórica (70%) + prática (30%)
-                      - 4º avaliação: reposição
-                      - 5º avaliação: final
-                    </section>
-                    <section data-markdown  id="avaliacoes" data-background="#162841">
-                      ### Datas Importantes
-                      | Data  | Avaliação |
-                      | ------ | ------ |
-                      | 19/09/2019 | 1a Avaliação |
-                      | 22/10/2019 | 2a Avaliação |
-                      | 26/11/2019 | 3a Avaliação |
-                      | 03/12/2019 | Reposição |
-                      | 10/12/2019 | Final |
-                    </section>
-                  </section>
+      <!-- =================== AVALIACOES ================== -->
+      <section>
+        <section data-markdown id="avaliacoes" data-background="#162841">
+          ### PROCESSO AVALIATIVO
+          Avaliações: A avaliação será realizada mediante 3 provas escritas e três trabalho prático e/ou lista de exercícios (passível de alterações).
+          - 1º avaliação: teórica (70%) + prática (30%)
+          - 2º avaliação: teórica (70%) + prática (30%)
+          - 3º avaliação: teórica (70%) + prática (30%)
+          - 4º avaliação: Reposição
+          - 5º avaliação: Final
+        </section>
+        <section data-markdown id="avaliacoes" data-background="#162841">
+          ### Datas Importantes
+          | Data | Avaliação |
+          | ------ | ------ |
+          | 19/09/2019 | 1a Avaliação |
+          | 22/10/2019 | 2a Avaliação |
+          | 26/11/2019 | 3a Avaliação |
+          | 03/12/2019 | Reposição |
+          | 10/12/2019 | Final |
+        </section>
+      </section>
 
-                <!-- =================== LINKS UTEIS ================== -->
-                <section>
-                  <section data-markdown  id="links_uteis" data-background="#602041">
-                    ## Link Úteis
-                    - Editor: https://atom.io/
-                    - Editor: https://code.visualstudio.com/
+      <!-- =================== LINKS UTEIS ================== -->
+      <section>
+        <section data-markdown id="links_uteis" data-background="#602041">
+          ## Link Úteis
+          - Editor: https://atom.io/
+          - Editor: https://code.visualstudio.com/
 
-                  </section>
-                </section>
+        </section>
+      </section>
 
 
 
-            </div>
-        </div>
+    </div>
+  </div>
 
-        <script src="assets/lib/js/head.min.js"></script>
-        <script src="assets/js/reveal.js"></script>
+  <script src="assets/lib/js/head.min.js"></script>
+  <script src="assets/js/reveal.js"></script>
 
-        <script>
-            // More info about config & dependencies:
-            // - https://github.com/hakimel/reveal.js#configuration
-            // - https://github.com/hakimel/reveal.js#dependencies
-            Reveal.initialize({
-                controls: true,
-                progress: true,
-                history: true,
-                center: true,
-                transition: 'slide', // none/fade/slide/convex/concave/zoom
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-                dependencies: [
-                    { src: 'assets/plugin/markdown/marked.js' },
-                    { src: 'assets/plugin/markdown/markdown.js' },
-                    { src: 'assets/plugin/notes/notes.js', async: true },
-                    { src: 'assets/plugin/zoom-js/zoom.js', async: true },
-                    { src: 'assets/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-                ]
-            });
-        </script>
+      dependencies: [{
+          src: 'assets/plugin/markdown/marked.js'
+        },
+        {
+          src: 'assets/plugin/markdown/markdown.js'
+        },
+        {
+          src: 'assets/plugin/notes/notes.js',
+          async: true
+        },
+        {
+          src: 'assets/plugin/zoom-js/zoom.js',
+          async: true
+        },
+        {
+          src: 'assets/plugin/highlight/highlight.js',
+          async: true,
+          callback: function() {
+            hljs.initHighlightingOnLoad();
+          }
+        }
+      ]
+    });
+  </script>
 
-    </body>
+</body>
+
 </html>
