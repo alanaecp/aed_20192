@@ -1,0 +1,519 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Aula 02 - Algoritmos e Estrutura de Dados</title>
+
+        <link rel="stylesheet" href="assets/css/reveal.css">
+        <!-- <link rel="stylesheet" href="css/theme/black.css"> -->
+        <link rel="stylesheet" href="assets/css/theme/night.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+        <!-- Custom CSS-->
+        <link rel="stylesheet" href="assets/css/custom.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!-- Manual style tweaks -->
+        <style>
+
+
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+              <!-- =================== CAPA =================== -->
+                <section>
+                    <section style="padding-top:100px" data-background="#292D34">
+                        <h1>AED</h1>
+                          - Aula 02 -
+                        <div>
+                          <img width="15%" class="plain" src="assets/images/letters/l.png" alt="">
+                          <img width="15%" class="plain" src="assets/images/letters/i.png" alt="">
+                          <img width="15%" class="plain" src="assets/images/letters/s.png" alt="">
+                          <img width="15%" class="plain" src="assets/images/letters/t.png" alt="">
+                          <img width="15%" class="plain" src="assets/images/letters/a.png" alt="">
+                          <img width="15%" class="plain" src="assets/images/letters/s.png" alt="">
+                        </div>
+                    </section>
+                  </section>
+                </section>
+
+                <!-- =================== CONTEUDO DA APRESENTAÇÃO =================== -->
+                <section>
+                  <section id="conteudo" data-background="#292D34">
+                      <h3>Conteúdo</h3>
+                      <div class="columns">
+                          <div class="col">
+                              <ul style="font-size:0.9em">
+                                  <li><a href="#">Dados e Tipos de Dados</a></li>
+                                  <li><a href="#">Arrays</a></li>
+                                  <ul>
+                                    <li><a href="#">Listas
+                                    <li><a href="#">Tuplas
+                                  </ul>
+                                  <li><a href="#">Exercícios</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </section>
+                </section>
+                <!-- =================== Se nao entender, pergunte =================== -->
+                <section data-background="#1A418E">
+                      <img width="150px" class="plain" src="assets/images/aluno1.png" alt="">
+                      <img width="150px" class="plain" src="assets/images/aluna1.png" alt="">
+                      <img width="150px" class="plain" src="assets/images/aluno2.png" alt="">
+                      <img width="150px" class="plain" src="assets/images/aluna2.png" alt="">
+                      <h3>Se não entender, pergunte!</h3>
+                </section>
+                <!-- =================== Dados e Tipos de Dado =================== -->
+                <section>
+                  <section data-markdown data-background="#1A418E">
+                    ### Dados e Tipos de Dado
+                    > Um dado é uma informação que um algoritmo recebe ou manipula;
+
+                    Exemplos de dados são:
+                     - Nomes;
+                     - datas;
+                     - valores (preços, notas, etc.);
+                     - e condições (verdadeiro e falso).
+
+                  </section>
+
+                  <section data-background="#1A418E">
+                    <h3>Dados e Tipos de Dado</h3>
+                    <blockquote  style="background-color:#4876BF;" class="w100">  Todo dado  é de um certo tipo que define sua natureza (p. ex., um nome é diferente de um valor numérico), identificando seu uso, e define as operações que podem ser realizadas com o dado;
+                    </blockquote>
+
+                    Por exemplo: <u>podemos somar dois valores numéricos,</u> mas <u>NÃO podemos  somar um número e uma frase</u>.
+                  </section>
+
+                  <section data-background="#1A418E"  style="font-size:0.8em">
+                    <h3>Dados e Tipos de Dado</h3>
+                    <div class="columns">
+                      <div class="column"  style="margin-right: 50px; padding: 0 50px 50px 10px;background-color:#4876BF;">
+                        <p>Tipos de dados atômicos:</p>
+                        <ul>
+                          <li>int  (ex: 1; 36; 2017)</li>
+                          <li>float (ex: 3,1416)</li>
+                          <li>bool (ex: True; False)</li>
+                        </ul>
+                      </div>
+                      <div class="column"  style="margin-right: 50px; padding:  0 50px 50px 10px;background-color:#4876BF;">
+                        <p>Tipos de dados de coleção:</p>
+                        <ul>
+                          <li>Listas</li>
+                          <li>Tuplas</li>
+                          <li>String</li>
+                          <li>Dicionários</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
+                </section>
+
+                <!-- =================== ARRAYS LISTAS =================== -->
+                <section>
+                  <section data-background="#1A418E" data-markdown>
+                    ### ARRAY
+                    > Array é um termo genérico para sequência.
+
+                    Em Python temos 4 estruturas com comportamento de arrays
+                    ##### Lista, Tupla, Conjuntos (sets) e String
+                    - Todas suportam indexição
+
+                  </section>
+                  <section data-markdown data-background="#1A418E">
+                    ### LISTAS
+                    - Uma lista é uma coleção ordenada de zero ou mais valores, de um mesmo tipo ou não.
+                    - Cada valor pode ser acessado por um índice dentro do lista.
+                    - É basicamente a mesma ideia de um VETOR ou ARRAY em outras linguagens.
+                    - Listas são dinâmicas: podem crescer ou diminuir com o tempo.
+                  </section>
+
+                  <section data-background="#1A418E">
+                    <h3>Listas</h3>
+                    <div data-markdown>
+                      ```python
+                      numeros = [3,5,7,9,12,15,18,21]
+
+                      ```
+                    </div>
+                    <div class="fundo-branco">
+                        <img class="plain" src="assets/images/aula02/array_1.png" alt="">
+                    </div>
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>Listas</h3>
+                    <div data-markdown>
+                      ```python
+                      numeros = [3,5,7,9,12,15,18,21]
+                      fatia = numeros[3:6]
+
+                      ```
+                    </div>
+                    <div class="fundo-branco">
+                        <img class="plain" src="assets/images/aula02/array_2.png" alt="">
+                    </div>
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>E se mudar o valor na parte fatiada? </h3>
+
+                    <div class="fundo-branco">
+                        <img class="plain" src="assets/images/aula02/array_2.png" alt="">
+                    </div>
+                    <div data-markdown>
+                      ```python
+                      fatia[2] = 25
+
+                      ```
+                    </div>
+                  </section>
+
+                  <section data-background="#1A418E">
+                    <h3>E se mudar o valor na parte fatiada? </h3>
+                    <div data-markdown>
+                      ```python
+                      fatia[2] = 25
+
+                      ```
+                    </div>
+
+                    <div class="fundo-branco">
+                        <img class="plain" width="80%" src="assets/images/aula02/array_3.png" alt="">
+                    </div><p>* só muda a fatia</p>
+                  </section>
+
+                  <section data-background="#1A418E">
+                    <h3>Valores iguais - referencia única </h3>
+                    <div data-markdown>
+                      ```python
+                      numeros = [0] * 8
+
+
+                      ```
+                    </div>
+
+                    <div class="fundo-branco">
+                        <img class="plain" width="80%" src="assets/images/aula02/array_4.png" alt="">
+                    </div>
+                    <div data-markdown>
+                      ```python
+                      numeros = [0, 0, 0, 0, 0, 0, 0, 0]
+                      # diferente, pois os valores sao guardados em posições de
+                      # memória distintas
+
+
+                      ```
+                    </div>
+                  </section>
+
+                  <section data-background="#1A418E">
+                    <h3>Criação EXPLÍCITA de Listas </h3>
+                    Para criar uma lista, utilizam-se colchetes []
+
+                    <div data-markdown style="font-size:1.5em;">
+                      ```python
+                      # Lista vazia
+                      L = []
+                      # Lista com elementos do mesmo tipo
+                      L = [1,3,5]
+                      # Lista com elementos de tipo distintos
+                      L = [True, 2, ’3’]
+                      ```
+                    </div>
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>Criação IMPLÍCITA de Listas </h3>
+                    <blockquote class="w100">
+                      L = [expressão for variável in sequência]
+                    </blockquote>
+
+                    <p style="font-size:0.9em;">
+                    Onde será Calculada a expressão para cada elemento.</p>
+                    <br>
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>Criação IMPLÍCITA de Listas </h3>
+                    <div data-markdown style="font-size:2em;">
+                      ```python
+                      # Exemplo
+
+                      L = [x ** 2 for x in range(10)]
+                      ```
+                    </div>
+                    <br>
+                    <p style="font-size:0.9em;">Leia assim: “Faça x ao quadrado para todo x de 0 a 9”
+</p>
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>Criação IMPLÍCITA de Listas c/ condição </h3>
+                    <blockquote class="w100">
+                      L = [expressão for variável in sequência if condição]
+
+                    </blockquote>
+
+                    <p style="font-size:0.9em;">
+                    Selecionar elementos que satisfazem uma condição.</p>
+                    <br>
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>Criação IMPLÍCITA de Listas c/ condição </h3>
+                    <div data-markdown style="font-size:1.6em;">
+                      ```python
+                      # Exemplo
+
+                      L = [x ** 2 for x in range(10) if x%3 ==0 ]
+                      ```
+                    </div>
+                    <br>
+                    <p style="font-size:0.9em;">Leia assim: “Faça x ao quadrado para todo x de 0 a 9 <u>que seja múltiplo de 3</u>”
+ </p>
+                  </section>
+
+                  <section data-background="#1A418E">
+                    <h3>Criação de Lista </h3>
+                    <p>Python cria uma nova lista sempre que [] for usado.</p>
+                    <div data-markdown style="font-size:1.7em;">
+                      ```python
+                      # Exemplo
+                      A = []
+                      B = []
+                      C = D = [] # C e D são a mesma lista
+                      C = []; D = [] # C e D são independentes
+
+                      ```
+                    </div>
+
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>O que eu pode ser feito c/ lista? </h3>
+                    <div data-markdown style="font-size:0.9em;">
+                      - Percorrer (acessar os itens da lista)
+                      - Incluir elementos
+                      - Excluir elementos
+                      - Ordenar
+                      - Obter valores específicos (maior número, menor número, ...)
+                      - Obter sublistas
+                      - ...
+                    </div>
+
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>(Algumas) Funções de Manipulação </h3>
+                    <div data-markdown style="font-size:0.9em;">
+                      | Função  | Descrição |
+                      | ------ | ------ |
+                      | append |  Insere no final|
+                      | clear |  Limpa toda a lista|
+                      | copy |  Produz uma cópia de L|
+                      | count |  Nº de ocorrências de um elemento|
+                      | extend |  Insere no final|
+                      | index |  Posição da primeira ocorrência de um elemento|
+                    </div>
+
+                    </section>
+                  <section data-background="#1A418E">
+                    <h3>Funções de Manipulação (cont.)</h3>
+                    <div data-markdown style="font-size:0.9em;">
+                      | Função  | Descrição |
+                      | ------ | ------ |
+                      | insert |  Insere um elemento numa posição especificada|
+                      | pop |  Retorna e remove um elemento|
+                      | remove |  Remove a 1ª ocorrência de um elemento|
+                      | reverse |  Inverte as posições dos elementos|
+                      | sort |  Ordena os elementos|
+
+                    </div>
+
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>append versus extend</h3>
+                    <div data-markdown style="font-size:2.0em;">
+                      ```python
+                      L = [1,2,3]
+                      L.append([4,5])
+                      print(L)
+
+                      ```
+
+                      ```python
+                      L = [1,2,3]
+                      L.extend([4,5])
+                      print(L)
+                      ```
+                    </div>
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>len( )</h3>
+                    retorna o número de itens da lista L
+
+                    <div data-markdown style="font-size:2.0em;">
+                      ```python
+                      L = [3,2,7,4,1]
+                      n = len(L)
+
+                      ```
+                    </div>
+                    <h3> L[ i ] </h3>
+                    retorna o número de itens da lista L
+                     <div data-markdown style="font-size:2.0em;">
+                      ```python
+                      L = [3,2,7,4,1]
+                      item = L[4]
+                      ```
+                      </div>
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3> L[inicio:fim] </h3>
+                    retorno os elementos do início ao fim de L. Isto chama-se fatiamento de listas.
+
+                    <div data-markdown style="font-size:2.0em;">
+                      ```python
+                      L = [3,2,7,4,1]
+                      seq = L[1:4]
+
+                      ```
+                    </div>
+                  </section>
+                  <section data-background="#1A418E">
+
+                    <h3> L[inicio : fim : n] </h3>
+                    retorna os elementos de inicio a fim em passos de n;
+                    <div data-markdown style="font-size:1.6em;">
+                      ```python
+                      L = [3,2,7,4,1]
+                      # elemento sim, elemento não
+                      seq = L[::2]
+
+                      # elemento sim, elemento não
+                      # apartir da posição 1
+                      seq = L[1::2]
+
+                      ```
+                    </div>
+
+
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>Manipulação</h3>
+                    <div class="fundo-branco">
+                      <img width="40%" class=" plain" src="assets/images/aula02/indices_lista.png" alt="">
+                    </div>
+
+
+                    <div data-markdown style="font-size:1.5em;">
+                      ```python
+                      Lista = [3,6,9,12,15, 18]
+                      Lista[0]   # o primeiro elemento da lista:3
+                      Lista[-1]  # o último elemento da lista: 18
+                      Lista[6]   # ERRO!
+
+                      ```
+                    </div>
+
+
+
+
+                    </section>
+
+                    <section data-background="#1A418E">
+                      <h3>Manipulação</h3>
+                       Utilizando o for-in: iterar pelos <u>ITENS</u>
+                      <div data-markdown style="font-size:2.0em;">
+                        ```python
+                        L = [3,2,7,4,1]
+                        for item in L:
+                        	print (item)
+
+                        ```
+                      </div>
+                    </section>
+                    <section data-background="#1A418E">
+                      <h3>Manipulação</h3>
+                       Utilizando o for-in: iterar pelos <u>ÍNDICES</u>
+                      <div data-markdown style="font-size:2.0em;">
+                        ```python
+                        L = [3,2,7,4,1]
+                        for index in range(len(L)):
+                        	print (index)
+
+
+                        ```
+                      </div>
+                    </section>
+                    <section data-background="#1A418E">
+                      <h3>Manipulação</h3>
+                       Utilizando o for-in: iterar pelos <u>ITENS</u> e <u>ÍNDICES</u>
+                      <div data-markdown style="font-size:2.0em;">
+                        ```python
+                        L = [3,2,7,4,1]
+                        for index, item in enumerate(L):
+                        	print (index, items)
+                        ```
+                      </div>
+                    </section>
+              </section>
+
+              <section>
+                <section data-background="#6F59AE">
+                  <h2>Exercícios</h2>
+
+                  Jupyter Notebook - aula02_exercicios_listas.ipynb (SIGAA)
+
+                </section>
+              </section>
+              <!-- =================== LINKS UTEIS ================== -->
+              <section>
+                <section  id="links_uteis" data-markdown  data-background="#5636DA">
+                  ### Links Úteis
+                  - https://pt.wikibooks.org/wiki/Python/Conceitos_b%C3%A1sicos/Estrutura_de_dados
+                  - https://panda.ime.usp.br/algoritmos/static/algoritmos/index.html
+                  - https://pythonhelp.wordpress.com/2013/06/26/brincando-com-listas/
+                  - http://interactivepython.org/runestone/static/pythonds/index.html
+
+                </section>
+              </section>
+            </div>
+        </div>
+
+        <script src="assets/lib/js/head.min.js"></script>
+        <script src="assets/js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                dependencies: [
+                    { src: 'assets/plugin/markdown/marked.js' },
+                    { src: 'assets/plugin/markdown/markdown.js' },
+                    { src: 'assets/plugin/notes/notes.js', async: true },
+                    { src: 'assets/plugin/zoom-js/zoom.js', async: true },
+                    { src: 'assets/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+
+
+
+    </body>
+  </html>
