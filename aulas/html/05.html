@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Aula 05 - Algoritmos e Estrutura de Dados</title>
+
+        <link rel="stylesheet" href="assets/css/reveal.css">
+        <!-- <link rel="stylesheet" href="css/theme/black.css"> -->
+        <link rel="stylesheet" href="assets/css/theme/night.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+        <!-- Custom CSS-->
+        <link rel="stylesheet" href="assets/css/custom.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!-- Manual style tweaks -->
+        <style>
+
+
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+              <!-- =================== CAPA =================== -->
+                <section>
+
+                      <section style="padding-top:100px" data-background="#292D34">
+                          <h1>AED</h1>
+                            - Aula 05 -
+                            <div>
+                              <img width="10%" class="plain" src="assets/images/letters/s.png" alt="">
+                              <img width="10%" class="plain" src="assets/images/letters/t.png" alt="">
+                              <img width="10%" class="plain" src="assets/images/letters/r.png" alt="">
+                              <img width="10%" class="plain" src="assets/images/letters/i.png" alt="">
+                              <img width="10%" class="plain" src="assets/images/letters/n.png" alt="">
+                              <img width="10%" class="plain" src="assets/images/letters/g.png" alt="">
+                              <img width="10%" class="plain" src="assets/images/letters/s.png" alt="">
+                            </div>
+                          <div>
+                            <img width="8%" class="plain" src="assets/images/letters/e.png" alt="">
+                            <img width="8%" class="plain" src="assets/images/letters/x.png" alt="">
+                            <img width="8%" class="plain" src="assets/images/letters/e.png" alt="">
+                            <img width="8%" class="plain" src="assets/images/letters/r.png" alt="">
+                            <img width="8%" class="plain" src="assets/images/letters/c.png" alt="">
+                            <img width="8%" class="plain" src="assets/images/letters/i.png" alt="">
+                            <img width="8%" class="plain" src="assets/images/letters/c.png" alt="">
+                            <img width="8%" class="plain" src="assets/images/letters/i.png" alt="">
+                            <img width="8%" class="plain" src="assets/images/letters/o.png" alt="">
+                            <img width="8%" class="plain" src="assets/images/letters/s.png" alt="">
+                          </div>
+                      </section>
+
+                  </section>
+
+                <!-- =================== CONTEUDO DA APRESENTAÇÃO =================== -->
+                <section>
+                  <section id="conteudo" data-background="#292D34">
+                      <h3>Conteúdo</h3>
+                      <div class="columns">
+                          <div class="col">
+                              <ul style="font-size:0.8em">
+                                  <li><a href="#">Exercícios</a></li>
+                                  <ol>
+                                    <li>Contagem de Ocorrências</li>
+                                    <li>Separação de String</li>
+                                    <li>Inversão Maiuscula</li>
+                                    <li>Nome na vertical</li>
+                                    <li>Nome na vertical em escada.</li>
+                                    <li>Nome na vertical em escada invertida</li>
+                                  </ol>
+                              </ul>
+                          </div>
+                      </div>
+                  </section>
+                </section>
+
+                <section>
+                  <section   data-background="#292D34">
+                    <h2>Exercícios</h2>
+                    <i class="fa fa-angle-double-down" style="font-size:100px"></i>
+                  </section>
+                  <section   data-background="#292D34">
+                    <h4>1) Exercício - Contagem de Ocorrências</h4>
+                    A partir de um texto fornecido pelo usuário, conte o número de caracteres e quantos deles são vogais.
+                  </section>
+                  <section   data-background="#292D34">
+                    <h4>2) Exercício - Separação de String</h4>
+                    Elabore um script que leia o nome completo de uma pessoa e imprima o prenome e o sobrenome.
+
+                  </section>
+                  <section   data-background="#292D34">
+                    <h4>3) Exercício - Inversão Maiuscula</h4>
+                    Faça um programa que permita ao usuário digitar o seu nome e em seguida mostre o nome do usuário de trás para frente utilizando somente letras maiúsculas.
+                    <br><blockquote class="w100" style="font-size:0.7em">Dica: lembre−se que ao informar o nome o usuário pode digitar letras maiúsculas ou minúsculas.</blockquote>
+                    <blockquote class="w100"  style="font-size:0.7em">
+                    Exemplo:
+                    <br>Entrada de dados: Alana
+                    <br>Saída de dados: ANALA
+                    </blockquote>
+                  </section>
+                  <section   data-background="#292D34">
+                    <h4>4) Exercício - Nome na vertical</h4>
+                    Faça um programa que solicite o nome do usuário e imprima-o na vertical
+
+                    <div data-markdown style="font-size:1.2em;">
+                      ```python
+                      Digite seu nome: FULANO
+
+                      F
+                      U
+                      L
+                      A
+                      N
+                      O
+                      ```
+                    </div>
+                  </section>
+                  <section   data-background="#292D34">
+                    <h4>5) Exercício - Nome na vertical em escada.</h4>
+                    Modifique o programa anterior de forma a mostrar o nome em formato de escada.
+
+
+                    <div data-markdown style="font-size:1.2em;">
+                      ```python
+                      Digite seu nome: FULANO
+
+                      F
+                      FU
+                      FUL
+                      FULA
+                      FULAN
+                      FULANO
+                      ```
+                    </div>
+                  </section>
+                  <section   data-background="#292D34">
+                    <h4>6) Exercício - Nome na vertical em escada invertida</h4>
+                    Altere o programa anterior de modo que a escada seja invertida.
+                    <div data-markdown style="font-size:1.2em;">
+                      ```python
+                      Digite seu nome: FULANO
+                      FULANO
+                      FULAN
+                      FULA
+                      FUL
+                      FU
+                      F
+
+                      ```
+                    </div>
+                  </section>
+                </section>
+
+            </div>
+        </div>
+
+                <script src="assets/lib/js/head.min.js"></script>
+                <script src="assets/js/reveal.js"></script>
+
+                <script>
+                    // More info about config & dependencies:
+                    // - https://github.com/hakimel/reveal.js#configuration
+                    // - https://github.com/hakimel/reveal.js#dependencies
+                    Reveal.initialize({
+                        controls: true,
+                        progress: true,
+                        history: true,
+                        center: true,
+                        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                        dependencies: [
+                            { src: 'assets/plugin/markdown/marked.js' },
+                            { src: 'assets/plugin/markdown/markdown.js' },
+                            { src: 'assets/plugin/notes/notes.js', async: true },
+                            { src: 'assets/plugin/zoom-js/zoom.js', async: true },
+                            { src: 'assets/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                        ]
+                    });
+                </script>
+            </body>
+          </html>

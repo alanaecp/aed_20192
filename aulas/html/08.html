@@ -1,0 +1,438 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Aula 08 - Algoritmos e Estruturas de Dados</title>
+
+        <link rel="stylesheet" href="assets/css/reveal.css">
+        <!-- <link rel="stylesheet" href="css/theme/black.css"> -->
+        <link rel="stylesheet" href="assets/css/theme/night.css">
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="assets/lib/css/zenburn.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Custom CSS-->
+        <link rel="stylesheet" href="assets/css/custom.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!-- Manual style tweaks -->
+        <style>
+
+
+        </style>
+    </head>
+    <body>
+      <div class="reveal">
+            <!-- SLIDES -->
+            <div class="slides">
+            <!-- =================== CAPA =================== -->
+              <section>
+                  <section style="padding-top:100px" data-background="#292D34">
+                        <h1>AED</h1>
+                          - Aula 08  -
+                        <div>
+                          <img width="8%" class="plain" src="assets/images/letters/i.png" alt="">
+                          <img width="8%" class="plain" src="assets/images/letters/n.png" alt="">
+                          <img width="8%" class="plain" src="assets/images/letters/t.png" alt="">
+                          <img width="8%" class="plain" src="assets/images/letters/r.png" alt="">
+                          <img width="8%" class="plain" src="assets/images/letters/o.png" alt="">
+                          <br>
+                          <img width="8%" class="plain" src="assets/images/letters/p.png" alt="">
+                          <img width="8%" class="plain" src="assets/images/letters/o.png" alt="">
+                          <img width="8%" class="plain" src="assets/images/letters/o.png" alt="">
+
+                        </div>
+                    </section>
+
+                </section>
+
+              <!-- =================== CONTEUDO DA APRESENTAÇÃO =================== -->
+              <section>
+                <section id="conteudo" data-background="#292D34">
+                    <h3>Conteúdo</h3>
+                    <div class="columns">
+                        <div class="col">
+                            <ul style="font-size:0.8em">
+                              <li><a href="#">Programação Estruturada</a></li>
+                              <li><a href="#">Programação Orientada a Objetos</a></li>
+                              <li><a href="#">Alguns Exemplos</a></li>
+                              <li><a href="#">Conceitos Fundamentais</a></li>
+                                <ul>
+                                  <li><a href="#">Classes</a></li>
+                                  <li><a href="#">Objetos</a></li>
+                                </ul>
+                                <li><a href="#">Exercícios</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+              </section>
+              <!-- =================== Se nao entender, pergunte =================== -->
+              <section>
+                <section data-background="#292D34">
+                      <img width="150px" class="plain" src="assets/images/aluno1.png" alt="">
+                      <img width="150px" class="plain" src="assets/images/aluna1.png" alt="">
+                      <img width="150px" class="plain" src="assets/images/aluno2.png" alt="">
+                      <img width="150px" class="plain" src="assets/images/aluna2.png" alt="">
+                      <h3>Se não entender, pergunte!</h3>
+                </section>
+              </section>
+              <!-- =================== Programacao Estruturada  =================== -->
+
+              <section>
+                <section data-background="#292D34">
+                  <h3>Evolução</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/evolucao.png" alt="">
+                  </div>
+                </section>
+
+
+                <section data-background="#292D34">
+                  <h3> Programação Estruturada</h3>
+                  <blockquote  style="background-color:#3A3D43;" class="w100"> é um paradigma de programação com ênfase no uso de subrotinas, laços de repetição, condicionais e estruturas em bloco.</blockquote>
+                  <br>
+                  <h5>PS: <em>Foi como programamos até agora aqui na disciplina</em></h5>
+                </section>
+
+                <section data-background="#292D34"  style="font-size:0.8em">
+                  <h3>Programação Estruturada</h3>
+                  <div data-markdown style="font-size:1.2em;">
+                    - **Sequência**: Uma tarefa é executada após a outra, linearmente.
+                    - **Decisão**: A partir de um teste lógico, determinado trecho de código é executado, ou não.
+                    - **Iteração**: A partir de um teste lógico, determinado trecho de código é repetido por um número finito de vezes
+                  </div>
+                </section>
+                <section data-background="#292D34"  style="font-size:0.8em">
+                  <h3>Programação Estruturada</h3>
+                  <div data-markdown style="font-size:1.2em;">
+                    **Vantagens**:
+                    - É fácil de entender.
+                    - Ainda muito usada em cursos introdutórios de programação.
+                    - Execução mais rápida.
+
+                    **Desvantagens**:
+                    - Baixa reutilização de código
+                    - Códigos confusos: dados misturadis com comportamento
+
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Programação Estruturada</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/prog_estruturada_1.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34"  style="font-size:1em">
+                  <h3>Programação Estruturada</h3>
+                  <p>Escrevendo código de forma imperativa (ou procedural).f
+                    </p>
+                  <div data-markdown style="font-size:1.5em;">
+                    ```python
+                    # Isto é, a forma que você já viu
+                    L = [3,2,7,4,1]
+                    for index in range(len(L)):
+                      print (index)
+                    ```
+                  </div>
+              </section>
+            </section>
+
+             <!-- ===================Programação Orientada a Objetos  =================== -->
+              <section>
+                <section data-background="#292D34">
+                  <h3>Programação Orientada a Objetos</h3>
+                  <blockquote  style="background-color:#3A3D43;" class="w100">
+                    Orientação a Objetos é um paradigma que considera que um programa formado por uma coleção de objetos que interagem entre si.
+                    </blockquote>
+                  <br>
+                  <h5><em>Objetivo: É trazer o mundo digital mais próximo do mundo real.</em></h5>
+                </section>
+                <section data-background="#292D34">
+                  <h3> Programação Orientada a Objetos</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/prog_oo_1.png" alt="">
+                  </div>
+                </section>
+
+                <section data-background="#292D34"  style="font-size:0.8em">
+                  <h3>Programação Orientada a Objetos</h3>
+                  <div data-markdown style="font-size:1.2em;">
+                    - Um programa formado por uma coleção de objetos que interagem entre si.
+                    - Os objetos conhecem muito bem a si mesmos
+                    - Respondem às mensagens de acordo com seus atributos (características) com seus próprios métodos (ações)
+
+                  </div>
+                </section>
+              </section>
+              <section>
+                <section data-background="#292D34">
+                  <h1>Exemplos</h1>
+
+                </section>
+                <section data-background="#292D34">
+                  <h3>Exemplo do mundo real</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/oo_ex1.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Exemplo do mundo real</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/oo_ex1_2.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Exemplo do mundo real</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/oo_ex1_3.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Exemplo do mundo real</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/oo_ex1_4.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Exemplo do mundo real</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/oo_ex1_5.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Exemplo computacional</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/oo_ex2.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Exemplo computacional</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/oo_ex2_1.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Exemplo computacional</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/oo_ex3.png" alt="">
+                  </div>
+                </section>
+              </section>
+              <section>
+                <section data-background="#292D34">
+                  <h2>Conceitos Fundamentais</h2>
+
+                </section>
+                <section data-background="#292D34">
+                  <h3>O que é OO?</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/oqueehoo.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Objetos</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/objeto1.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Caneta é um objeto?</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/objeto2.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Caneta é um objeto!</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/objeto3.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Definição de Classe</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/classe1.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Definição de Classe</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/classe2.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Definição de Classe</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/classe3.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Como?</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/como_oo.png" alt="">
+                  </div>
+                </section>
+              </section>
+
+              <section>
+                <section data-background="#292D34">
+                  <h2>Outro Exemplo</h2>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Definição de Classe</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/classe_definicao.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Classe Cachorro</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/classe_cachorro1.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                <h3>Definição de Classe - Python</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/class_python1.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                <h3>Definição de Atributos - Python</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/class_python2.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                <h3>Instâncias da Classe (Objetos) - Python</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/class_python3.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#A60000">
+                <h3>Instâncias da Classe (Objetos) - Python (ERRO)</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/class_python3_erro.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Acessando atributos - Python</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/class_python4.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Definindo métodos - Python</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/metodos1.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Definindo métodos - Python</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/metodos2.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Definindo métodos - Python</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/metodos3.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Definindo métodos - Python</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/metodos4.png" alt="">
+                  </div>
+                </section>
+              </section>
+              <section>
+                <section data-background="#292D34">
+                  <h2>Último Exemplo</h2>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Definindo métodos - Python</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/circulo1.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Definindo métodos - Python</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/circulo2.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Definindo métodos - Python</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/circulo3.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Definindo métodos - Python</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/circulo4.png" alt="">
+                  </div>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Definindo métodos - Python</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/circulo4_erro.png" alt="">
+                  </div>
+                </section>
+              </section>
+              <section>
+                <section data-background="#292D34">
+                  <h2>Exercícios</h2>
+                </section>
+                <section data-background="#292D34">
+                  <h3>Classe Pessoa</h3>
+                  <div class="fundo-branco">
+                    <img  class="plain" src="assets/images/aula08/classe_pessoa.png" alt="">
+                  </div>
+                </section>
+
+              </section>
+            <section>
+              <section  data-markdown  id="links_uteis" data-background="#292D34">
+               ### Links Úteis
+                - Material baseado na apostila http://www.dcc.ufrj.br/~fabiom/mab225/pythonoo.pdf
+                - https://youtu.be/KlIL63MeyMY
+              </section>
+            </section>
+          </div>
+            <!-- FIM SLIDES -->
+      </div>
+                <script src="assets/lib/js/head.min.js"></script>
+                <script src="assets/js/reveal.js"></script>
+
+                <script>
+                    // More info about config & dependencies:
+                    // - https://github.com/hakimel/reveal.js#configuration
+                    // - https://github.com/hakimel/reveal.js#dependencies
+                    Reveal.initialize({
+                        controls: true,
+                        progress: true,
+                        history: true,
+                        center: true,
+                        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                        dependencies: [
+                            { src: 'assets/plugin/markdown/marked.js' },
+                            { src: 'assets/plugin/markdown/markdown.js' },
+                            { src: 'assets/plugin/notes/notes.js', async: true },
+                            { src: 'assets/plugin/zoom-js/zoom.js', async: true },
+                            { src: 'assets/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                        ]
+                    });
+                </script>
+            </body>
+          </html>

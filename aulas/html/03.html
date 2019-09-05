@@ -1,0 +1,492 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Aula 03 - Algoritmos e Estrutura de Dados</title>
+
+        <link rel="stylesheet" href="assets/css/reveal.css">
+        <!-- <link rel="stylesheet" href="css/theme/black.css"> -->
+        <link rel="stylesheet" href="assets/css/theme/night.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+        <!-- Custom CSS-->
+        <link rel="stylesheet" href="assets/css/custom.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!-- Manual style tweaks -->
+        <style>
+
+
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+              <!-- =================== CAPA =================== -->
+              <section>
+                  <section style="padding-top:100px" data-background="#292D34">
+                      <h1>AED</h1>
+                        - Aula 03 -
+                      <div>
+                        <img width="15%" class="plain" src="assets/images/letters/t.png" alt="">
+                        <img width="15%" class="plain" src="assets/images/letters/u.png" alt="">
+                        <img width="15%" class="plain" src="assets/images/letters/p.png" alt="">
+                        <img width="15%" class="plain" src="assets/images/letters/l.png" alt="">
+                        <img width="15%" class="plain" src="assets/images/letters/a.png" alt="">
+                        <img width="15%" class="plain" src="assets/images/letters/s.png" alt="">
+                      </div>
+                  </section>
+                </section>
+              </section>
+
+                <!-- =================== CONTEUDO DA APRESENTAÇÃO =================== -->
+                <section>
+                  <section id="conteudo" data-background="#292D34">
+                      <h3>Conteúdo</h3>
+                      <div class="columns">
+                          <div class="col">
+                              <ul style="font-size:0.9em">
+                                  <li><a href="#">Dados e Tipos de Dados</a></li>
+                                  <li><a href="#">Arrays</a></li>
+                                  <ul>
+                                    <li><a href="#">Listas
+                                    <li><a href="#">Tuplas
+                                  </ul>
+                                  <li><a href="#">Exercícios</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </section>
+                </section>
+                <!-- =================== Se nao entender, pergunte =================== -->
+                <section data-background="#1A418E">
+                      <img width="150px" class="plain" src="assets/images/aluno1.png" alt="">
+                      <img width="150px" class="plain" src="assets/images/aluna1.png" alt="">
+                      <img width="150px" class="plain" src="assets/images/aluno2.png" alt="">
+                      <img width="150px" class="plain" src="assets/images/aluna2.png" alt="">
+                      <h3>Se não entender, pergunte!</h3>
+                </section>
+                <!-- =================== Dados e Tipos de Dado =================== -->
+                <section>
+                  <section data-markdown data-background="#1A418E">
+                    ### Dados e Tipos de Dado
+                    > Um dado é uma informação que um algoritmo recebe ou manipula;
+
+                    Exemplos de dados são:
+                     - Nomes;
+                     - datas;
+                     - valores (preços, notas, etc.);
+                     - e condições (verdadeiro e falso).
+
+                  </section>
+
+                  <section data-background="#1A418E">
+                    <h3>Dados e Tipos de Dado</h3>
+                    <blockquote  style="background-color:#4876BF;" class="w100">  Todo dado  é de um certo tipo que define sua natureza (p. ex., um nome é diferente de um valor numérico), identificando seu uso, e define as operações que podem ser realizadas com o dado;
+                    </blockquote>
+
+                    Por exemplo: <u>podemos somar dois valores numéricos,</u> mas <u>NÃO podemos  somar um número e uma frase</u>.
+                  </section>
+
+                  <section data-background="#1A418E"  style="font-size:0.8em">
+                    <h3>Dados e Tipos de Dado</h3>
+                    <div class="columns">
+                      <div class="column"  style="margin-right: 50px; padding: 0 50px 50px 10px;background-color:#4876BF;">
+                        <p>Tipos de dados atômicos:</p>
+                        <ul>
+                          <li>int  (ex: 1; 36; 2017)</li>
+                          <li>float (ex: 3,1416)</li>
+                          <li>bool (ex: True; False)</li>
+                        </ul>
+                      </div>
+                      <div class="column"  style="margin-right: 50px; padding:  0 50px 50px 10px;background-color:#4876BF;">
+                        <p>Tipos de dados de coleção:</p>
+                        <ul>
+                          <li>Listas</li>
+                          <li>Tuplas</li>
+                          <li>String</li>
+                          <li>Dicionários</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
+                </section>
+
+                <!-- =================== ARRAYS LISTAS =================== -->
+                <section>
+                  <section data-background="#1A418E" data-markdown>
+                    ### ARRAY
+                    > Array é um termo genérico para sequência.
+
+                    Em Python temos 4 estruturas com comportamento de arrays
+                    ##### Lista, Tupla, Conjuntos (sets) e String
+                    - Todas suportam indexição
+
+                  </section>
+
+                  <section data-markdown data-background="#1A418E">
+                    ## TUPLAS
+
+                  </section>
+
+                  <section data-markdown data-background="#1A418E">
+                    ### TUPLAS
+                    - Uma tupla é uma coleção ordenada de zero ou mais valores, de um mesmo tipo ou não. Ela serve para agrupar dados.
+
+                    - Cada valor pode ser acessado por um índice dentro da tupla.
+
+
+                  </section>
+                  <section data-markdown data-background="#1A418E">
+                    ### TUPLAS
+                    - Semelhante a Listas, exceto que Tuplas são imutáveis: uma vez definidas, elas permanecem iguais por toda execução do programa.
+
+                  </section>
+
+
+
+                  <section data-background="#1A418E">
+                    <h3>Tuplas</h3>
+                    <div data-markdown  style="font-size:0.8em;">
+                      - Tuplas, assim como as listas, são posições da memória:
+                      - Identificadas por um único nome
+                      - individualizadas por índices
+                      - com conteúdo do mesmo tipo ou tipos variados
+
+                    </div>
+                    <br>
+                    <div class="fundo-branco">
+                        <img class="plain" src="assets/images/aula03/tuplas_1.png" alt="">
+                    </div>
+                  </section>
+
+                  <section data-markdown data-background="#1A418E">
+                    ### Porque usar Tuplas?
+                    - Tuplas são mais rápidas que listas
+                    - Tuplas são mais seguras que listas
+                    - Tuplas são usadas em chaves de dicionários
+                    - Tuplas são usadas na formatação de strings
+                  </section>
+
+                  <section data-background="#1A418E">
+                    <h3>Criação de Tuplas </h3>
+                    Para criar uma tupla, utilizam-se parênteses ()
+                    <div data-markdown style="font-size:1.2em;">
+                      ```python
+                      #Tupla vazia:
+                      T1 = ()
+                      # Tupla homogênea:
+                      T2 = (1,2,3,4,5)
+                      # Tupla heterogênea:
+                      T3 = ('fisica', 'quimica', 1997, 2000)
+                      # Tupla de um elemento:
+                      T4 = (50,)
+                      #Tupla a partir de uma lista
+                      T5 = tuple([3,2,7,4,1])
+
+                      ```
+                    </div>
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3> T[inicio:fim] </h3>
+                    retorna os elementos do início ao fim de T. Isto chama-se fatiamento de tuplas.
+
+                    <div data-markdown style="font-size:2.0em;">
+                      ```python
+                      T = (3,2,7,4,1)
+                      seq1 = T[1:4]
+                      seq2 = T[:3]
+                      seq3 = T[:]
+                      seq4 = T[:-1]
+                      seq5 = T[::2] #T[inicio:fim:n]
+
+                      ```
+                    </div>
+                  </section>
+                  <section data-background="#ff164d">
+                    <h3> Não é possivel MODIFICAR elemento de uma tupla </h3>
+                    <div data-markdown style="font-size:2.0em;">
+                      ```python
+                      T = (3,2,7,4,1)
+                      T[4] = 8 #erro!!!
+                      ```
+                    </div>
+                  </section>
+
+
+                  <section data-background="#1A418E">
+                    <h3>TUPLAS</h3>
+                    É possível criar tuplas a partir de tuplas.
+
+                    <div data-markdown style="font-size:2.0em;">
+                      ```python
+                      T1 = (3,2,7,4,1)
+                      T2 = ('a', 'b', 'c')
+                      T3 = T1 + T2  # concatenação de tuplas
+                      print (T3)
+
+                      ```
+                    </div>
+
+                  </section>
+                  <section data-background="#ff164d">
+                    <h3> Não é possivel REMOVER elemento de uma tupla </h3>
+                    <div data-markdown style="font-size:2.0em;">
+                      ```python
+                      T = (3,2,7,4,1)
+                      del T[2] #erro!!!
+
+                      ```
+                    </div>
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>TUPLAS</h3>
+                    É possível criar uma nova tupla sem um determinado item.
+
+
+                    <div data-markdown style="font-size:2.0em;">
+                      ```python
+                      T1 = (3,2,7,4,1)
+                      T2 = T1[:2] + T1[3:]
+                      print (T2)
+
+                      ```
+                    </div>
+
+                  </section>
+
+                  <section data-background="#1A418E">
+                    <h3>len( )</h3>
+                    retorna o número de itens da tupla T
+
+                    <div data-markdown style="font-size:2.0em;">
+                      ```python
+                      T = (3,2,7,4,1)
+                      n = len(T)
+
+                      ```
+                    </div>
+                  </section>
+                  <section data-background="#1A418E">
+
+                    <h3> Repetição de Tupla </h3>
+                    retorna o número de itens da lista L
+                     <div data-markdown style="font-size:2.0em;">
+                      ```python
+                      T = ('Oi',)*4
+                      print (T)
+
+                      ```
+                      </div>
+                  </section>
+                  <section data-background="#1A418E">
+
+                    <h3> Repetição de Tupla </h3>
+
+                     <div data-markdown style="font-size:2.0em;">
+                      ```python
+                      T = ('Oi',)*4
+                      print (T)
+
+                      ```
+                      </div>
+                  </section>
+                  <section data-background="#1A418E">
+
+                    <h3> Pertence a Tupla </h3>
+                    Verifica se um item pertence ou não a tupla
+                     <div data-markdown style="font-size:2.0em;">
+                      ```python
+                      T = (3,2,7,4,1)
+                      print(3 in T)
+
+                      ```
+                      </div>
+                  </section>
+                  <section data-background="#1A418E">
+
+                    <h3> Máximo e Mínimo em uma tupla</h3>
+                     <div data-markdown style="font-size:2.0em;">
+                      ```python
+                      T = (3,2,7,4,1)
+                      print(max(T))
+                      print(min(T))
+                      ```
+                      </div>
+                  </section>
+
+                  <section data-background="#ff164d">
+                    <h3>Compreensão de listas funciona apenas em listas! </h3>
+                    <div data-markdown style="font-size:1.7em;">
+                      ```python
+                      T1 = (x**2 for x in range(10))
+                      #Não produz o efeito esperado!
+                      ```
+                      ```python
+                      T2 = tuple([x**2 for x in range(10)])
+                      #Produz o efeito esperado
+                      ```
+
+                    </div>
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>Empacotamento / Desempacotamento </h3>
+                    <blockquote  style="background-color:#4876BF;" class="w100">
+                      Empacotar significa agrupar valores. <br>
+É utilizado para permitir múltiplas atribuições de valores simultaneamente.
+
+                    </blockquote>
+
+
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>Empacotamento </h3>
+                    <div data-markdown style="font-size:1.7em;">
+                      ```python
+                      T = ('Carlos', 'BICT', '2018.2')
+
+                      ```
+                    </div>
+                    <h3>Desempacotamento </h3>
+                    <div data-markdown style="font-size:1.7em;">
+                      ```python
+                      (nome, curso, ingresso) = T
+
+
+                      ```
+                    </div>
+                  </section>
+
+                  <section data-background="#1A418E">
+                    <h3>Empacotamento / Desempacotamento </h3>
+                    <blockquote  style="background-color:#4876BF;" class="w100">
+                      Como trocar o valor de duas variáveis a e b?
+                    </blockquote>
+                    <div data-markdown style="font-size:1.7em;">
+                      ```python
+                      a = 10
+                      b = 5
+                      temp = a
+                      a = b
+                      b = temp
+                      ```
+                    </div>
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>Empacotamento / Desempacotamento </h3>
+                    <blockquote  style="background-color:#4876BF;" class="w100">
+                      E como fazer a troca utilizando empacotamento?
+
+                    </blockquote>
+                    <div data-markdown style="font-size:1.7em;">
+                      ```python
+                      a = 10
+                      b = 5
+                      (a,b) = (b,a)
+
+                      ```
+                    </div>
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>Retorno de funções</h3>
+                    <blockquote  style="background-color:#4876BF;" class="w100">
+                      Funções podem retornar até um valor apenas
+                    </blockquote>
+                    <div data-markdown style="font-size:1.7em;">
+                      ```python
+                      def circunferencia(r):
+                        c = 2 * math.pi * r
+                        return c
+
+
+                      ```
+                    </div>
+                  </section>
+                  <section data-background="#1A418E">
+                    <h3>Retorno de funções</h3>
+                    <blockquote  style="background-color:#4876BF;" class="w100">
+                      Funções podem retornar até um valor apenas <br>E se quisermos retornar mais de um valor?
+
+                    </blockquote>
+                    <div data-markdown style="font-size:1.7em;">
+                      ```python
+                      def circunferencia_e_area(r):
+                        c = 2 * math.pi * r
+                        a = math.pi * r * r
+                        return (c,a)
+
+
+                      ```
+                    </div>
+                  </section>
+
+
+
+
+
+
+              </section>
+
+              <section>
+                <section   data-background="#6F59AE">
+                  <h2>Exercícios</h2>
+<!--
+                  <a href="./jupyter/aula03_exercicios_tuplas.ipynb">Jupyter Notebook - aula03_exercicios_tuplas.ipynb</a> -->
+
+                </section>
+              </section>
+
+              <section>
+                <section  data-markdown  id="links_uteis" data-background="#602041">
+                 ### Links Úteis
+
+                  - http://www3.ifrn.edu.br/~jurandy/fdp/doc/aprenda-python/capitulo_09.html#capitulo-9-tuplas
+                  - http://www.tutorialspoint.com/python/python_tuples.htm
+                  - http://interactivepython.org/runestone/static/pythonds/Introduction/GettingStartedwithData.html
+
+                </section>
+              </section>
+
+
+
+
+            </div>
+        </div>
+
+                <script src="assets/lib/js/head.min.js"></script>
+                <script src="assets/js/reveal.js"></script>
+
+                <script>
+                    // More info about config & dependencies:
+                    // - https://github.com/hakimel/reveal.js#configuration
+                    // - https://github.com/hakimel/reveal.js#dependencies
+                    Reveal.initialize({
+                        controls: true,
+                        progress: true,
+                        history: true,
+                        center: true,
+                        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                        dependencies: [
+                            { src: 'assets/plugin/markdown/marked.js' },
+                            { src: 'assets/plugin/markdown/markdown.js' },
+                            { src: 'assets/plugin/notes/notes.js', async: true },
+                            { src: 'assets/plugin/zoom-js/zoom.js', async: true },
+                            { src: 'assets/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                        ]
+                    });
+                </script>
+            </body>
+          </html>

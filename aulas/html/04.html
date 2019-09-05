@@ -1,0 +1,577 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Aula 04 - Algoritmos e Estrutura de Dados</title>
+
+        <link rel="stylesheet" href="assets/css/reveal.css">
+        <!-- <link rel="stylesheet" href="css/theme/black.css"> -->
+        <link rel="stylesheet" href="assets/css/theme/night.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+        <!-- Custom CSS-->
+        <link rel="stylesheet" href="assets/css/custom.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!-- Manual style tweaks -->
+        <style>
+
+
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+              <!-- =================== CAPA =================== -->
+                <section>
+
+                      <section style="padding-top:100px" data-background="#292D34">
+                          <h1>AED</h1>
+                            - Aula 04 -
+                          <div>
+                            <img width="12%" class="plain" src="assets/images/letters/s.png" alt="">
+                            <img width="12%" class="plain" src="assets/images/letters/t.png" alt="">
+                            <img width="12%" class="plain" src="assets/images/letters/r.png" alt="">
+                            <img width="12%" class="plain" src="assets/images/letters/i.png" alt="">
+                            <img width="12%" class="plain" src="assets/images/letters/n.png" alt="">
+                            <img width="12%" class="plain" src="assets/images/letters/g.png" alt="">
+                            <img width="12%" class="plain" src="assets/images/letters/s.png" alt="">
+                          </div>
+                      </section>
+
+                  </section>
+
+                <!-- =================== CONTEUDO DA APRESENTAÇÃO =================== -->
+                <section>
+                  <section id="conteudo" data-background="#292D34">
+                      <h3>Conteúdo</h3>
+                      <div class="columns">
+                          <div class="col">
+                              <ul style="font-size:0.8em">
+                                  <li><a href="#">Strings</a></li>
+                                  <li><a href="#">Acessando os caracteres em uma String</a></li>
+                                  <li><a href="#">Acessando parte em uma String (slicing)</a></li>
+                                  <li><a href="#">Manipulação de Strings</a></li>
+                                  <ul>
+                                    <li><a href="#">Conversão maiúscula / minúscula</a></li>
+                                    <li><a href="#">Concatenação (Operador +)</a></li>
+                                    <li><a href="#">Cópias repetidas (Operador *)</a></li>
+                                    <li><a href="#">Separação (split())</a></li>
+                                    <li><a href="#">Busca (find())</a></li>
+                                    <li><a href="#">Substituição (replace())</a></li>
+                                    <li><a href="#">Iteração</a></li>
+                                  </ul>
+                                  <li><a href="#">Exercícios</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </section>
+                </section>
+                <!-- =================== Se nao entender, pergunte =================== -->
+                <section data-background="#193A4D">
+                      <img width="150px" class="plain" src="assets/images/aluno1.png" alt="">
+                      <img width="150px" class="plain" src="assets/images/aluna1.png" alt="">
+                      <img width="150px" class="plain" src="assets/images/aluno2.png" alt="">
+                      <img width="150px" class="plain" src="assets/images/aluna2.png" alt="">
+                      <h3>Se não entender, pergunte!</h3>
+                </section>
+                <!-- =================== String =================== -->
+                <section>
+                  <section data-markdown data-background="#193A4D">
+                    ### Strings
+                    > Uma string (cordão, em Inglês) é uma <u>cadeia de caracteres</u>.
+
+                    - Uma cadeia de caracteres é uma sequência de símbolos, tais como letras, números, sinais de pontuação, etc., que formam textos em geral.
+
+                  </section>
+
+                  <section data-background="#193A4D">
+                    <h3>Strings</h3>
+                    <blockquote  style="background-color:#4876BF;" class="w100"> Uma cadeia de caracteres é uma sequência de símbolos, tais como letras, números, sinais de pontuação, etc., que formam textos em geral.
+                    </blockquote>
+                    <div data-markdown style="font-size:1.2em;">
+                      ```python
+                      texto = "Aprendendo Python"
+                      texto = 'Aprendendo Python'
+                      texto = '''
+                      Aprendendo
+                      Python
+                      '''
+                      ```
+                    </div>
+
+                  </section>
+
+                  <section data-background="#193A4D"  style="font-size:0.8em">
+                    <h3>String (escape)</h3>
+                    Se quiser incluir o símbolo de aspas (simples ou duplas) em uma string, use a expressão \“ ou \’ . Ou use “ e ‘ aninhados:
+
+                    <div data-markdown style="font-size:2.2em;">
+                      ```python
+                      bairro= "Ponta D'areia"
+                      bairro= 'Ponta D\'areia'
+                      ```
+                    </div>
+                  </section>
+
+                  <section data-background="#193A4D"  style="font-size:0.8em">
+                    <h3>String (ASCII)</h3>
+                    Os caracteres de uma string são codificados no padrão ASCII. Cada caractere do teclado é representado por um código numérico:
+
+                    <div class="fundo-branco">
+                        <img class="plain" src="assets/images/aula04/funcoes_ascii.png" alt="">
+                    </div>
+                  </section>
+
+                  <section data-background="#193A4D"  style="font-size:0.8em">
+                    <h3>função ord()</h3>
+                    Retorna o código ASCII do caractere passado como parâmetro:
+                    <div class="fundo-branco">
+                        <img class="plain" src="assets/images/aula04/funcao_ord.png" alt="">
+                    </div>
+                  </section>
+                  <section data-background="#193A4D"  style="font-size:0.8em">
+                    <h3>função chr()</h3>
+                    Retorna o caracter ASCII:
+                    <div class="fundo-branco">
+                        <img class="plain" src="assets/images/aula04/funcao_chr.png" alt="">
+                    </div>
+                  </section>
+
+                </section>
+
+                <!-- =================== Acessando Caracteres em uma String =================== -->
+                <section>
+                  <section data-background="#193A4D"  style="font-size:0.8em">
+                    <h2>Acessando Caracteres em uma String</h2>
+                    <br><i class="fa fa-angle-double-down" style="font-size:100px"></i>
+                  </section>
+
+                  <section data-background="#193A4D"  style="font-size:0.8em">
+                    <h3>Acessando Caracteres em uma String</h3>
+                    <h4>As strings são indexadas, iniciando por 0</h4>
+                    <div class="fundo-branco">
+                        <img width="50%" class="plain" src="assets/images/aula04/index_string.png" alt="">
+                    </div>
+                    <div data-markdown style="font-size:1.8em;">
+                      ```python
+                      str1[0]		 # primeiro caracter: 'P'
+                      str1[5]	  	 # ultimo caracter: 'n'
+                      str1[6]		 # ERRO!!
+                      ```
+                    </div>
+                  </section>
+                  <section data-background="#193A4D"  style="font-size:0.8em">
+                    <h3>String</h3>
+                    <h4>Índices também podem ser negativos, de trás para frente:</h4>
+                    <div class="fundo-branco">
+                        <img width="50%" class="plain" src="assets/images/aula04/index_string2.png" alt="">
+                    </div>
+                    <div data-markdown style="font-size:1.8em;">
+                      ```python
+                      str1[-1]		  # ultimo caracter: 'n'
+                      str1[-6]		  # primeiro caracter:  'P'
+                      str1[-7]	 	  # ERRO!!
+
+                      ```
+                    </div>
+                  </section>
+                </section>
+
+                  <!-- =================== Acessando Caracteres em uma String =================== -->
+                    <section>
+                  <section data-background="#193A4D"  style="font-size:0.8em">
+                    <h2>Acessando Parte de uma String (Slicing)</h2>
+                    <br><i class="fa fa-angle-double-down" style="font-size:100px"></i>
+
+                  </section>
+
+                  <section data-background="#193A4D"  style="font-size:0.8em">
+                    <h3>String</h3>
+                    <h4>Acesso a partes da string (slicing)</h4>
+                    <div class="fundo-branco">
+                        <img width="50%" class="plain" src="assets/images/aula04/index_string2.png" alt="">
+                    </div>
+                    <div data-markdown style="font-size:1.5em;">
+                      ```python
+                      str1[0:2]   # posição 0 a 1: 'Py’
+                      str1[:2]    # posição inicial até a 1:'Py’
+                      str1[2:6]   # posição 2 a 5: 'thon’
+                      str1[2:]    # carac. da posição 2 até o final: 'thon’
+                      str[:-2]    # exclui os dois últimos caracteres: 'Pyth'
+                      ```
+                    </div>
+                  </section>
+                </section>
+
+                <!-- =================== Manipulação de String =================== -->
+                <section>
+                  <section data-background="#193A4D" >
+                    <h3>Manipulação de String</h3>
+                    <blockquote class="w100">
+                      upper() - converte o conteúdo da string para letras maiúsculas:
+                    </blockquote>
+
+                    <div data-markdown style="font-size:1.9em;">
+                      ```python
+                      >>> s = “Exercicio”
+                      >>> s.upper()
+                      EXERCICIO
+                      ```
+                    </div>
+                  </section>
+                  <section data-background="#193A4D" >
+                    <h3>Manipulação de String</h3>
+                    <blockquote class="w100">
+                      lower() - converte o conteúdo da string para letras minúsculas:
+                    </blockquote>
+
+                    <div data-markdown style="font-size:1.9em;">
+                      ```python
+                      >>> s = “BICT/UFMA”
+                      >>> s.lower()
+                      bict/ufma
+
+                      ```
+                    </div>
+                  </section>
+                <section data-background="#193A4D" >
+                    <h3>Manipulação de String</h3>
+                    <blockquote class="w100">
+                      Operador '+': Concatena duas ou mais strings.
+                    </blockquote>
+
+                    <div data-markdown style="font-size:1.9em;">
+                      ```python
+                      >>> s1 = "Python"
+                      >>> s2 = "3"
+                      >>> s1 + " " + s2
+                      'Python 3'
+                      ```
+                    </div>
+                  </section>
+                  <section data-background="#193A4D" >
+                      <h3>Manipulação de String</h3>
+                      <blockquote class="w100">
+                        Operador '*': Faz cópias repetidas da string.
+                      </blockquote>
+
+                      <div data-markdown style="font-size:1.9em;">
+                        ```python
+                        >>> s = "UFMA"
+                        >>> s*3
+                        "UFMAUFMAUFMA"
+                        >>> (s+ ‘ ”)*3
+                        "UFMA UFMA UFMA"
+                        ```
+                      </div>
+                    </section>
+                  <section data-background="#193A4D" >
+                    <h3>Manipulação de String</h3>
+                    <blockquote class="w100">
+                      len(): quantidade de caracteres da string.
+                    </blockquote>
+
+                    <div data-markdown style="font-size:1.9em;">
+                      ```python
+                      >>> s = "BICT/UFMA"
+                      >>> len(s)
+                      9
+                      ```
+
+                    </div>
+                  </section>
+                  <section data-background="#193A4D" >
+                    <h3>Manipulação de String</h3>
+                    <blockquote class="w100">
+                      find(): retorna o índice da 1ª ocorrência de uma string dentro da outra
+                    </blockquote>
+
+                    <div data-markdown style="font-size:1.9em;">
+                      ```python
+                      >>> nome='José da Silva'
+                      >>> nome.find('s')
+                      2
+                      >>> nome.find('da')
+                      5
+                      ```
+                    </div>
+                  </section>
+                  <section data-background="#193A4D" >
+                    <h3>Manipulação de String</h3>
+                    <blockquote class="w100">
+                      find(): retorna o índice da 1ª ocorrência de uma string dentro da outra.
+                    </blockquote>
+
+                    <div data-markdown style="font-size:1.4em;">
+                      ```python
+                      string1 = 'Fulano de Tal'
+                      string2 = 'de'
+                      string1.find(string2)		# 7
+
+                      ```
+                    </div>
+                    Para checar se a string2 está na string1, utilize o operador <u>in</u>.
+                  </section>
+                  <section data-background="#193A4D" >
+                    <h3>Manipulação de String</h3>
+                    <blockquote class="w100">
+                      find(): retorna o índice da 1ª ocorrência de uma string dentro da outra.
+                    </blockquote>
+
+                    <div data-markdown style="font-size:1.4em;">
+                      ```python
+                      string1 = 'Fulano de Tal'
+                      string2 = 'de'
+                      string1.find(string2)		# 7
+
+                      ```
+                    </div>
+                    Para checar se a string2 está na string1, utilize o operador <u>in</u>.
+                  </section>
+                  <section data-background="#193A4D" >
+                    <h3>Manipulação de String</h3>
+                    <blockquote class="w100">
+                      <strong>in</strong> : Percorre uma string (iteração).
+
+                    </blockquote>
+
+                    <div data-markdown style="font-size:1.9em;">
+                      ```python
+                      s = 'algoritmos'
+                      for x in s:
+                        print(x)
+                      ```
+                    </div>
+                  </section>
+                  <section data-background="#193A4D" >
+                    <h3>Manipulação de String</h3>
+                    <blockquote class="w100">
+                      <strong>in</strong> : verifica se uma string é substring de outra.
+
+                    </blockquote>
+
+                    <div data-markdown style="font-size:1.9em;">
+                      ```python
+                      >>> nome='José da Silva'
+                      >>>'da' in nome
+                      True
+                      >>> 'de' in nome
+                      False
+
+                      ```
+                    </div>
+                  </section>
+                  <section data-background="#193A4D" >
+                    <h3>Manipulação de String</h3>
+                    <blockquote class="w100">
+                      <strong>split()</strong> : retorna os caracteres antes da primeira ocorrência de um caractere separador em uma string de entrada.
+
+                    </blockquote>
+
+                    <div data-markdown style="font-size:1.4em;">
+                      ```python
+                      >>> str1 = 'Fulano de Tal'
+                      >>> str1.split()  # ['Fulano', 'de', 'Tal']
+                      >>> str1.split(' ')  # ['Fulano', 'de', 'Tal']
+                      >>> str1.split(',')  # ['Fulano de Tal']
+                      >>>'1,2,3'.split(',') # ['1', '2', '3']
+
+                      ```
+                    </div>
+                    Obs: O caractere separador default é o espaço em branco.
+                  </section>
+                  <section data-background="#193A4D" >
+                    <h3>Manipulação de String</h3>
+                    <blockquote class="w100">
+                      <strong>replace()</strong> : realiza uma operação padrão de localizar e substituir.
+substitui strings para criar uma nova string.
+
+                    </blockquote>
+
+                    <div data-markdown style="font-size:1.4em;">
+                      ```python
+                      S1 = 'um aluno, dois alunos, tres alunos.'
+                      S2 = S1.replace('aluno','estudante')
+                      print(S1)
+                      print(S2)
+                      ```
+                    </div>
+                  </section>
+                  <section data-background="#193A4D" >
+                    <h3>Manipulação de String</h3>
+                    <blockquote class="w100">
+                      <strong>replace()</strong> : realiza uma operação padrão de localizar e substituir.
+substitui strings para criar uma nova string.
+
+                    </blockquote>
+
+                    <div data-markdown style="font-size:1.2em;">
+                      ```python
+                      str1 = '''Na minha família há vários médicos. Meu avô,
+                      meu pai, minha mãe e eu somos médicos.'''
+
+                      str2 = 'médicos'
+                      str3 = 'engenheiros'
+                      str1.replace(str2,str3)
+
+                      ```
+                    </div>
+                  </section>
+
+                  <section data-background="#193A4D" >
+                    <h3>Manipulação de String</h3>
+                    <blockquote class="w100">
+                      <strong>ITERAÇÃO</strong> : Percorre cada caractere uma string.
+
+
+                    </blockquote>
+
+                    <div data-markdown style="font-size:1.2em;">
+                      ```python
+                      S = 'algoritmos'
+                      for x in S:
+                        print(x)
+                      ```
+                    </div>
+                  </section>
+
+
+              </section>
+
+              <section>
+                <section   data-background="#292D34">
+                  <h2>Exercícios</h2>
+                  <i class="fa fa-angle-double-down" style="font-size:100px"></i>
+                </section>
+                <section   data-background="#292D34">
+                  <h4>1) Exercício - Contagem de Ocorrências</h4>
+                  A partir de um texto fornecido pelo usuário, conte o número de caracteres e quantos deles são vogais.
+                </section>
+                <section   data-background="#292D34">
+                  <h4>2) Exercício - Separação de String</h4>
+                  Elabore um script que leia o nome completo de uma pessoa e imprima o prenome e o sobrenome.
+
+                </section>
+                <section   data-background="#292D34">
+                  <h4>3) Exercício - Inversão Maiuscula</h4>
+                  Faça um programa que permita ao usuário digitar o seu nome e em seguida mostre o nome do usuário de trás para frente utilizando somente letras maiúsculas.
+                  <br><blockquote class="w100" style="font-size:0.7em">Dica: lembre−se que ao informar o nome o usuário pode digitar letras maiúsculas ou minúsculas.</blockquote>
+                  <blockquote class="w100"  style="font-size:0.7em">
+                  Exemplo:
+                  <br>Entrada de dados: Alana
+                  <br>Saída de dados: ANALA
+                  </blockquote>
+                </section>
+                <section   data-background="#292D34">
+                  <h4>4) Exercício - Nome na vertical</h4>
+                  Faça um programa que solicite o nome do usuário e imprima-o na vertical
+
+                  <div data-markdown style="font-size:1.2em;">
+                    ```python
+                    Digite seu nome: FULANO
+
+                    F
+                    U
+                    L
+                    A
+                    N
+                    O
+                    ```
+                  </div>
+                </section>
+                <section   data-background="#292D34">
+                  <h4>5) Exercício - Nome na vertical em escada.</h4>
+                  Modifique o programa anterior de forma a mostrar o nome em formato de escada.
+
+
+                  <div data-markdown style="font-size:1.2em;">
+                    ```python
+                    Digite seu nome: FULANO
+
+                    F
+                    FU
+                    FUL
+                    FULA
+                    FULAN
+                    FULANO
+                    ```
+                  </div>
+                </section>
+                <section   data-background="#292D34">
+                  <h4>6) Exercício - Nome na vertical em escada invertida</h4>
+                  Altere o programa anterior de modo que a escada seja invertida.
+                  <div data-markdown style="font-size:1.2em;">
+                    ```python
+                    Digite seu nome: FULANO
+                    FULANO
+                    FULAN
+                    FULA
+                    FUL
+                    FU
+                    F
+
+                    ```
+                  </div>
+                </section>
+
+
+
+
+
+              </section>
+
+              <section>
+                <section  data-markdown  id="links_uteis" data-background="#292D34">
+                 ### Links Úteis
+                  - http://www3.ifrn.edu.br/~jurandy/fdp/doc/aprenda-python/capitulo_07.html
+                  - http://www.tutorialspoint.com/python/python_strings.htm
+                  - http://openbookproject.net/thinkcs/python/english3e/strings.html
+
+
+                </section>
+              </section>
+
+
+
+
+            </div>
+        </div>
+
+                <script src="assets/lib/js/head.min.js"></script>
+                <script src="assets/js/reveal.js"></script>
+
+                <script>
+                    // More info about config & dependencies:
+                    // - https://github.com/hakimel/reveal.js#configuration
+                    // - https://github.com/hakimel/reveal.js#dependencies
+                    Reveal.initialize({
+                        controls: true,
+                        progress: true,
+                        history: true,
+                        center: true,
+                        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                        dependencies: [
+                            { src: 'assets/plugin/markdown/marked.js' },
+                            { src: 'assets/plugin/markdown/markdown.js' },
+                            { src: 'assets/plugin/notes/notes.js', async: true },
+                            { src: 'assets/plugin/zoom-js/zoom.js', async: true },
+                            { src: 'assets/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                        ]
+                    });
+                </script>
+            </body>
+          </html>

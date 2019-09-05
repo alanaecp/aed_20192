@@ -1,0 +1,599 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Aula 06 - Algoritmos e Estruturas de Dados</title>
+
+        <link rel="stylesheet" href="assets/css/reveal.css">
+        <!-- <link rel="stylesheet" href="css/theme/black.css"> -->
+        <link rel="stylesheet" href="assets/css/theme/night.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="assets/lib/css/zenburn.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Custom CSS-->
+        <link rel="stylesheet" href="assets/css/custom.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!-- Manual style tweaks -->
+        <style>
+
+
+        </style>
+    </head>
+    <body>
+      <div class="reveal">
+          <div class="slides">
+            <!-- =================== CAPA =================== -->
+              <section>
+
+                    <section style="padding-top:100px" data-background="#292D34">
+                        <h1>AED</h1>
+                          - Aula 06 -
+                        <div>
+                          <img width="8%" class="plain" src="assets/images/letters/d.png" alt="">
+                          <img width="8%" class="plain" src="assets/images/letters/i.png" alt="">
+                          <img width="8%" class="plain" src="assets/images/letters/c.png" alt="">
+                          <img width="8%" class="plain" src="assets/images/letters/i.png" alt="">
+                          <img width="8%" class="plain" src="assets/images/letters/o.png" alt="">
+                          <img width="8%" class="plain" src="assets/images/letters/n.png" alt="">
+                          <img width="8%" class="plain" src="assets/images/letters/a.png" alt="">
+                          <img width="8%" class="plain" src="assets/images/letters/r.png" alt="">
+                          <img width="8%" class="plain" src="assets/images/letters/i.png" alt="">
+                          <img width="8%" class="plain" src="assets/images/letters/o.png" alt="">
+                          <img width="8%" class="plain" src="assets/images/letters/s.png" alt="">
+                        </div>
+                    </section>
+
+                </section>
+
+              <!-- =================== CONTEUDO DA APRESENTAÇÃO =================== -->
+              <section>
+                <section id="conteudo" data-background="#292D34">
+                    <h3>Conteúdo</h3>
+                    <div class="columns">
+                        <div class="col">
+                            <ul style="font-size:0.8em">
+                                <li><a href="#">Dicionários</a></li>
+                                <ul>
+                                  <li><a href="#">CRUD - <em>Create, Read, Update, and Delete</em></a></li>
+                                </ul>
+                                <li><a href="#">Métodos auxiliares</a></li>
+                                <li><a href="#">Exercícios</a></li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+              </section>
+              <!-- =================== Se nao entender, pergunte =================== -->
+              <section>
+                <section data-background="#292D34">
+                      <img width="150px" class="plain" src="assets/images/aluno1.png" alt="">
+                      <img width="150px" class="plain" src="assets/images/aluna1.png" alt="">
+                      <img width="150px" class="plain" src="assets/images/aluno2.png" alt="">
+                      <img width="150px" class="plain" src="assets/images/aluna2.png" alt="">
+                      <h3>Se não entender, pergunte!</h3>
+                </section>
+              </section>
+              <!-- =================== Exemplo =================== -->
+              <section>
+                <section data-background="#292D34"  style="font-size:1.2em">
+                  <h3>Antes de começar a falar de dicionários.. </h3>
+                  <i class="fa fa-angle-double-down" style="font-size:100px"></i>
+
+                </section>
+                <section data-background="#292D34"  style="font-size:1.4em">
+                  <h3>Exemplo</h3>
+                  <div class="columns">
+                      <div style="width:30%">
+                        <i class="fa fa-address-book" style="font-size:250px; padding-top: 15%;"></i>
+                      </div>
+                      <div class="col">
+                        <blockquote class="w100">
+                          Considere que seja necessário representar uma caderneta de contatos de telefones
+                        </blockquote>
+
+
+                      </div>
+                    </div>
+                    <blockquote class="w100 fragment fade-in">
+                        Qual estrutura usar?
+                      </blockquote>
+
+                </section>
+
+
+                <section data-background="#292D34"  style="font-size:0.8em">
+                  <h3>Exemplo</h3>
+                  <div class="columns">
+                      <div style="width:20%">
+                        <i class="fa fa-address-book" style="font-size:100px"></i>
+                      </div>
+                      <div class="col">
+                        <blockquote class="w100">
+                          Considere que seja necessário representar uma caderneta de contatos de telefones
+                        </blockquote>
+                      </div>
+                    </div>
+                  <blockquote class="w100">
+                    Uma solução é ter uma lista de nomes e outra de telefones
+                  </blockquote>
+                  <div data-markdown style="font-size:1.1em;">
+                    ```python
+                    nomes = ['Joao', 'Gilberto', 'Christina', 'Shakira']
+                    telefones = ['(98)9412-7287', '(98)9449-8918','(98)9580-3455','(98)9966-3100']
+                    ```
+                  </div>
+                  <div data-markdown style="font-size:1.5em;" class="fragment fade-in">
+                    ###### Se quiser saber o telefone do Gilberto?
+                  </div>
+                  <div data-markdown style="font-size:1.5em;" class="fragment fade-in">
+                    ```python
+                    Tel =  telefones[nomes.index('Gilberto')]
+                    ```
+                  </div>
+                </section>
+                <section data-background="#292D34"  style="font-size:1.3em">
+                  <h3>Neste exemplo</h3>
+                  <blockquote class="w100">
+                    Embora passamos usar uma lista de nomes e outra de telefones, não é a melhor opção em Python. <br><br>Melhor usar Dicionário.
+                  </blockquote>
+                </section>
+
+              </section>
+
+              <!-- =================== Dicionários =================== -->
+              <section>
+                <section data-background="#292D34">
+                  <h3>Dicionários</h3>
+                  <blockquote  style="background-color:#3A3D43;" class="w100"> Um dicionário é uma coleção de zero ou mais pares de itens, onde cada par consiste de uma chave e um valor.
+                </section>
+
+
+                <section data-background="#292D34">
+                  <h3>Dicionários</h3>
+                  <blockquote  style="background-color:#3A3D43;" class="w100"> Um dicionário é uma coleção de zero ou mais pares de itens, onde cada par consiste de uma chave e um valor.
+
+                  </blockquote>
+                  <div class="columns">
+                    <div class="col">
+                      <table style="font-size:0.6em;">
+                        <tr>
+                          <td>Produto</td>
+                          <td>Valor</td>
+                        </tr>
+                        <tr>
+                          <td>alface</td>
+                          <td>2.8</td>
+                        </tr>
+                        <tr>
+                          <td>beterraba</td>
+                          <td>1.25</td>
+                        </tr>
+                        <tr>
+                          <td>brocolis</td>
+                          <td>4.00</td>
+                        </tr>
+                        <tr>
+                          <td>tomate</td>
+                          <td>1.20</td>
+                        </tr>
+                      </table>
+                    </div>
+                      <div class="col">
+                        <div data-markdown style="font-size:1.2em;">
+                        ```python
+                        tabela = {"alface":2.8,
+                        "beterraba": 1.25,
+                        "brocolis": 4.00,
+                        "tomate": 1.20
+                        }
+
+                        ```
+                        </div>
+                      </div>
+
+                    </div>
+
+                </section>
+
+                <section data-background="#292D34"  style="font-size:0.8em">
+                  <h3>Dicionários</h3>
+
+                  Diferentemente das demais coleções estudadas (listas, tuplas e strings), os índices dos dicionários podem ser também quaisquer tipos imutáveis de dados.
+
+                  <div data-markdown style="font-size:1.5em;">
+                    ```python
+                    dic1 = {"chave": 1} # chave do tipo string
+                    ```
+                    ```python
+                    dic2 = {100: 1} # chave numérica
+                    ```
+
+                    ```python
+                    dic3 = {(0,0): 1, (0,1): 2, (1,0): 3, (1,1): 4}
+                    # chave do tipo tupla
+                    ```
+                  </div>
+                </section>
+              </section>
+
+              <!-- =================== Dicionários =================== -->
+              <section>
+                <section data-background="#292D34"  style="font-size:1.3em">
+                  <h3>CRUD</h3>
+                  <ul>
+                    <li><a href="#">C - <em>Create</em></a> - CRIAR</li>
+                    <li><a href="#">R - <em>Read</em></a> - LER </li>
+                    <li><a href="#">U - <em>Update</em></a> - ATUALIZAR </li>
+                    <li><a href="#">D - <em>Delete</em></a> - DELETAR</li>
+                  </ul>
+                </section>
+              </section>
+              <section>
+                <section data-background="#292D34">
+                  <h3>Dicionários (Criação)</h3>
+                  Para criar um dicionário, utilizam-se chaves { }
+
+                  <div data-markdown style="font-size:1.4em;">
+                    ```python
+                    # Dicionário vazio
+                    D1 = {}
+                    # Dicionário homogênio
+                    D2 = {'MA' : 'Maranhão', 'PA' : 'Pará', … }
+
+                    # Dicionário heterogênio
+                    D3 = {'um':1,'dois':2,'tres':3}
+                    D4 = {1:'oi',2:'ola',3:'tchau'}
+                    D5 = {(1,2):'tupla!',True:'bool!','t':'string!'}
+                    D6 = {[3,4]:'lista!'} #Erro!
+                    ```
+                  </div>
+                </section>
+
+                <section data-background="#292D34"  style="font-size:0.8em">
+                  <h3>Dicionários (Adição)</h3>
+                  Por adição de Elementos
+
+                  <div data-markdown style="font-size:1.5em;">
+                    ```python
+                    D = {}
+                    D['um'] = 'one'
+                    D['dois'] = 'two'
+                    D['tres'] = 'three'
+                    print(D)
+                   ```
+                  </div>
+                </section>
+                <section data-background="#292D34"  style="font-size:0.8em">
+                  <h3>Dicionários (Criação)</h3>
+                  Obs: As chaves devem ser únicas.
+
+                  <div data-markdown style="font-size:1.5em;">
+                    ```python
+                    D = {'Nome': 'Ana', 'Idade': 27, 'Nome': 'Maria'}
+                    print(D)
+                   ```
+                  </div>
+                </section>
+              </section>
+
+              <section>
+                <section data-background="#292D34">
+                  <h3>Dicionários (Leitura)</h3>
+
+                  <blockquote class="w100">
+                    D[chave] retorna o valor correspondente a chave.
+                    </blockquote>
+
+                  <div data-markdown style="font-size:1.1em;">
+                    ```python
+                    Registro = {'Nome':'Ana', 'CPF':'123.456.789-00', 'Idade':27}
+                    print(Registro['Nome'])
+                    print(Registro['CPF'])
+                    print(Registro['Idade'])
+                    ```
+                  </div>
+                   <blockquote class="w100" style="background-color:#C24754">
+                    OBS: Se a chave não estiver presente, um erro é gerado.
+                    </blockquote>
+                    <div data-markdown style="font-size:1.6em;">
+                    ```python
+                    print(Registro['Endereco']) #ERRO!!
+                    ```
+                  </div>
+                </section>
+                <section data-background="#292D34" >
+                  <h3>Iteração</h3>
+                  <blockquote class="w100">
+                    Utilizando o for-in: iterar pelos valores
+                  </blockquote>
+                  <div data-markdown style="font-size:1.4em;">
+                    ```python
+                    D = {'Brasil':'Real','EUA':'Dolar', 'Japao':'Iene'}
+                    for m in D.values():
+                      print('A moeda eh: ' + m)
+                    ```
+                  </div>
+                </section>
+                <section data-background="#292D34" >
+                  <h3>Iteração</h3>
+                  <blockquote class="w100">
+                    Utilizando o for-in: iterar pelas chaves
+                  </blockquote>
+                  <div data-markdown style="font-size:1.4em;">
+                    ```python
+                    D = {'Brasil':'Real','EUA':'Dolar', 'Japao':'Iene'}
+                    for p in D.keys():
+                      print('O pais eh: ' + p)
+                    ```
+                  </div>
+                </section>
+                <section data-background="#292D34" >
+                  <h3>Iteração</h3>
+                  <blockquote class="w100">
+                    Utilizando o for-in: iterar pelos elementos
+                  </blockquote>
+                  <div data-markdown style="font-size:1.4em;">
+                    ```python
+                    D = {'Brasil':'Real','EUA':'Dolar', 'Japao':'Iene'}
+                    for (p,m) in D.items():
+                      print('O pais ' + p + ' tem a moeda ' + m)
+
+
+                    ```
+                  </div>
+                </section>
+              </section>
+              <section>
+                <section data-background="#292D34">
+                  <h3>Dicionário (Atualização)</h3>
+                  <blockquote class="w100">
+                    Modifica-se o valor de um elemento por sua chave.
+                    </blockquote>
+                  <div data-markdown style="font-size:1.4em;">
+                    ```python
+                    D = {'Codigo':'1234567','Prova':7.5}
+                    D['Prova'] = 9.0     #Atualiza elemento existente!
+                    D['Prova'] += 1.0
+                    D['Trabalho'] = 5.5  #Inclui a nova chave
+                    ```
+                  </div>
+                </section>
+              </section>
+              <section>
+                <section data-background="#292D34">
+                  <h3>Dicionário (Deleção)</h3>
+                  <blockquote class="w100" style="background-color:#C24754">
+                   Pode-se remover um elemento específico, todos os itens ou o dicionário inteiro
+                   </blockquote>
+                  <div data-markdown style="font-size:1.5em;">
+                  ```python
+                  del D['Prova'] # Remove um elemento específico
+                  D.clear()      # Remove todas os elementos e
+                  del D          #Remove o dicionário
+
+                  ```
+                </div>
+                </section>
+
+              </section>
+              <section>
+                <section data-background="#292D34" >
+                  <h3>Métodos Auxiliares</h3>
+                  <blockquote class="w100">
+                    len() - Fornece o tamanho do dicionário
+                  </blockquote>
+
+                  <div data-markdown style="font-size:1.4em;">
+                    ```python
+                    D = {'Brasil':'Real','EUA':'Dolar', 'Japao':'Iene'}
+                    print(len(D))
+
+                    # Saída:  3
+
+                    ```
+                  </div>
+                </section>
+                <section data-background="#292D34" >
+                  <h3>Métodos Auxiliares</h3>
+                  <blockquote class="w100">
+                    keys() - Fornece uma lista contendo todas as chaves do dicionário
+                  </blockquote>
+
+                  <div data-markdown style="font-size:1.4em;">
+                    ```python
+                    D = {'Brasil':'Real','EUA':'Dolar', 'Japao':'Iene'}
+                    print(D.keys())
+
+                    # Saída: dict_keys(['Brasil', 'EUA', 'Japao'])
+
+                    ```
+                  </div>
+                </section>
+                <section data-background="#292D34" >
+                  <h3>Métodos Auxiliares</h3>
+                  <blockquote class="w100">
+                    values() - Fornece uma lista contendo todas os valores do dicionário
+                  </blockquote>
+
+                  <div data-markdown style="font-size:1.4em;">
+                    ```python
+                    D = {'Brasil':'Real','EUA':'Dolar', 'Japao':'Iene'}
+                    print(D.values())
+
+                    # Saída: dict_values(['Real', 'Dolar', 'Iene'])
+
+                    ```
+                  </div>
+                </section>
+                <section data-background="#292D34" >
+                  <h3>Métodos Auxiliares</h3>
+                  <blockquote class="w100">
+                    items() - Fornece uma lista de tupla contendo todas os chaves e valores do dicionário
+                  </blockquote>
+
+                  <div data-markdown style="font-size:1em;">
+                    ```python
+                    D = {'Brasil':'Real','EUA':'Dolar', 'Japao':'Iene'}
+                    print(D.items())
+
+                    # Saída: dict_items([('Brasil', 'Real'), ('EUA', 'Dolar'), ('Japao', 'Iene')])
+
+                    ```
+                  </div>
+                </section>
+                <section data-background="#292D34" >
+                  <h3>Métodos Auxiliares</h3>
+                  <blockquote class="w100">
+                    update() - Adiciona um dicionário a outro do dicionário
+                  </blockquote>
+
+                  <div data-markdown style="font-size:1em;">
+                    ```python
+                    D1 = {'Brasil':'Real','EUA':'Dolar', 'Japao':'Iene'}
+                    D2 = {'Argentina':'Peso','Reino Unido':'Libra'}
+                    D1.update(D2)
+                    print(D1)
+                    ```
+                  </div>
+                  <div data-markdown style="font-size:0.75em;">
+                    ```python
+                    # Saída: {'Brasil': 'Real', 'EUA': 'Dolar', 'Japao': 'Iene','Argentina': 'Peso', 'Reino Unido': 'Libra'}
+                    ```
+                  </div>
+                </section>
+              </section>
+            <section>
+              <section data-background="#292D34">
+                <h2>Exercícios</h2>
+                <br><i class="fa fa-angle-double-down" style="font-size:100px"></i>
+              </section>
+              <section  data-background="#292D34">
+                <h4>1 ) Agenda Telefônica</h4>
+                Crie um programa que, usando dicionário, crie uma agenda de tamanho fornecido inicialmente pelo usuário. Leia os dados (nome, telefone) de todos os contatos do usuário de forma que a agenda fique completa e permita imprimir todos os contatos. Por fim, faça uma pesquisa pelo nome e apresente o telefone.
+              </section>
+              <section  data-background="#292D34">
+                <h4>2) Tradução Pirata</h4>
+                <div class="columns">
+                  <div class="col" style="font-size:0.8em;">
+
+                    <blockquote class="w100">
+                      A tabela ao lado contém tradução de algumas palavras em português para a língua dos piratas.
+                    </blockquote>
+                    Escreva um programa que pede que o usuário digite uma frase em português e imprima a tradução da frase para a língua dos piratas.
+                  </div>
+                  <div class="col">
+                    <div data-markdown style="font-size:0.4em;">
+                      | Português  | Pirata |
+                      | ------ | ------ |
+                      | senhor	| matey|
+                      | hotel	| fleabag inn|
+                      | estudante	| swabbie|
+                      | garoto	| matey|
+                      | madame	 | proudbeauty|
+                      | professor	| foul blaggart|
+                      | restaurante | 	galley|
+                      | seu | 	yer|
+                      | com licença | 	arr|
+                      | estudantes | 	swabbies|
+                      | são | 	be|
+                      | advogado | 	foul blaggart|
+                      | o	| th’|
+                      | banheiro | 	head|
+                      | meu | 	me|
+                      | oi	| avast|
+                      | é	| be|
+                      | homem	| matey|
+                  </div>
+                  </div>
+                </div>
+
+              </section>
+              <section  data-background="#292D34" style="font-size:0.8em;">
+                <h4>3 ) Fequência da Ocorrência de Letras</h4>
+                Escreva um programa que leia uma string do teclado e retorne uma tabela com a frequência com que cada letra aparece na string. Ignore se as letras são maiúsculas ou minúsculas.
+                <p>Um exemplo de execução do programa ficaria assim:</p>
+
+                <div data-markdown style="font-size:1.3em;">
+                  ```python
+                  Digite uma Frase: Sabendo o que sei e sabendo o que sabes e o que não sabes
+                  e o que não sabemos, ambos saberemos se somos sábios, sabidos ou
+                  simplesmente saberemos se somos sabedores.
+
+                  ```
+                  ```python
+                  #Saida
+                  {'d': 5, 'i': 6, 'g': 1, 't': 2, 'e': 26, ' ': 33, 'u': 6, 'm': 9, 'a': 12,
+                  'f': 1, 'r': 4, 's': 29, ':': 1, 'b': 11, 'n': 5, 'o': 20, 'q': 4, 'ã': 2,
+                  ',': 2, 'á': 1, 'p': 1, 'l': 1, '.': 1}
+                    ```
+                </div>
+
+              </section>
+              <section  data-background="#292D34" style="font-size:0.8em;">
+                <h4>4 ) Aprovados </h4>
+                4 - Suponha um dicionário D de estudantes, como definida no exemplo abaixo, onde cada par consiste do nome do estudante e das notas do mesmo. Escreva uma função chamada “aprovados” que receba como entrada o dicionário D e imprima o nome dos alunos aprovados. <u> Um aluno é aprovado quando todas as suas notas são maiores que 7.</u> </p>
+
+                <div data-markdown style="font-size:1.3em;">
+                  ```python
+                  # Por exemplo, dado o dicionário abaixo, a chamada de aprovados(D)
+                  # deverá imprimir Denise.
+
+                  D={'Alano':(7.5,8.0,6.5),'Denise':(9.0,8.5,9.5),'Ana Paula':(3.5,1.0,6.5)}
+
+
+                  ```
+
+                </div>
+              </section>
+            </section>
+
+            <section>
+              <section  data-markdown  id="links_uteis" data-background="#292D34">
+               ### Links Úteis
+                - http://www3.ifrn.edu.br/~jurandy/fdp/doc/aprenda-python/capitulo_10.html
+                - http://excript.com/python/funcoes-dicionarios.html
+
+              </section>
+            </section>
+          </div>
+      </div>
+                <script src="assets/lib/js/head.min.js"></script>
+                <script src="assets/js/reveal.js"></script>
+
+                <script>
+                    // More info about config & dependencies:
+                    // - https://github.com/hakimel/reveal.js#configuration
+                    // - https://github.com/hakimel/reveal.js#dependencies
+                    Reveal.initialize({
+                        controls: true,
+                        progress: true,
+                        history: true,
+                        center: true,
+                        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                        dependencies: [
+                            { src: 'assets/plugin/markdown/marked.js' },
+                            { src: 'assets/plugin/markdown/markdown.js' },
+                            { src: 'assets/plugin/notes/notes.js', async: true },
+                            { src: 'assets/plugin/zoom-js/zoom.js', async: true },
+                            { src: 'assets/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                        ]
+                    });
+                </script>
+            </body>
+          </html>
